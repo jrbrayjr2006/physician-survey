@@ -131,6 +131,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="whyFeelingLabel" destination="7za-0K-8UE" id="Sz3-hb-qaT"/>
+                                    <segue destination="eV7-TF-ehU" kind="show" id="ufF-Wh-G4A"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -147,6 +148,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fMC-I6-23J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4095" y="338"/>
+        </scene>
+        <!--Operations Table View Controller-->
+        <scene sceneID="pBh-yJ-2jF">
+            <objects>
+                <tableViewController storyboardIdentifier="operationsTableViewController" id="eV7-TF-ehU" customClass="OperationsTableViewController" customModule="PhysicianSurvey" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="JR7-GI-FYd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ZZ2-hC-UYM" customClass="OperationsTableViewCell" customModule="PhysicianSurvey" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZZ2-hC-UYM" id="kLn-0D-vYW">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="eV7-TF-ehU" id="S3Q-ra-HLS"/>
+                            <outlet property="delegate" destination="eV7-TF-ehU" id="HjM-we-xBz"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="operationsTableView" destination="JR7-GI-FYd" id="8U4-Sa-5sY"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ScX-OZ-JdR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4752" y="338"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ntm-wf-PCo">

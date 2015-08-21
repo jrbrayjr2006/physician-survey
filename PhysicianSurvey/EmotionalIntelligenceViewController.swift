@@ -13,6 +13,8 @@ class EmotionalIntelligenceViewController: UIViewController {
     var feelings : [Int] = [1,2,3,4,5,6,7,8,9,10];
     
     var strFeeling : String?;
+    
+    var survey : Survey = Survey.sharedFavoriteList;
 
     @IBOutlet weak var feelingPicker: UIPickerView!
     
@@ -39,7 +41,7 @@ class EmotionalIntelligenceViewController: UIViewController {
         strFeeling = String(feelings[row]) as String;
         var selectedValue : Int = feelings[row];
         
-        //survey.score = 0;
+        survey.score = selectedValue;
         return strFeeling;
     }
     

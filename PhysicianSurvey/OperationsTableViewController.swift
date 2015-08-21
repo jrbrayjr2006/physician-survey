@@ -1,5 +1,5 @@
 //
-//  WhyFeelingViewController.swift
+//  OperationsTableViewController.swift
 //  PhysicianSurvey
 //
 //  Created by JAMES BRAY on 8/20/15.
@@ -8,14 +8,14 @@
 
 import UIKit
 
-class WhyFeelingViewController: UITableViewController {
+class OperationsTableViewController: UITableViewController {
     
-    private var whyFeelingArray : [String] = ["Hospital Operations", "Sound Operations"];
+    var hospitalOperationsArray : [String] = ["Nursing", "Consultants", "Operator", "Paging", "Dictation", "Queries", "Rapid Response/Codes", "PCP’s", "Case Managers"];
+    var soundOperationsArray : [String] = ["Leadership", "Sound Connect", "Fellow Hospitalists"];
+    var survey :Survey = Survey.sharedFavoriteList;
     
-    var survey : Survey = Survey.sharedFavoriteList;
+    @IBOutlet var operationsTableView: UITableView!
 
-    @IBOutlet var whyFeelingTableView: UITableView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,7 +25,7 @@ class WhyFeelingViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        self.whyFeelingTableView.registerClass(WhyFeelingTableViewCell.self, forCellReuseIdentifier: "whyFeelingCell");
+        self.operationsTableView.registerClass(OperationsTableViewCell.self, forCellReuseIdentifier: "operationsTableViewCell");
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,20 +44,18 @@ class WhyFeelingViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return whyFeelingArray.count;
+        return 0
     }
 
+    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cellIdentifier : String = "whyFeelingTableViewCell";
-        let cell: WhyFeelingTableViewCell = self.whyFeelingTableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! WhyFeelingTableViewCell;
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
+
         // Configure the cell...
-        var strWhyFeeling : String = String(whyFeelingArray[indexPath.row]) as String;
-        //cell.accessoryType = UITableViewCellAccessoryType.DetailButton;
-        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator;
-        cell.whyFeelingLabel!.text = strWhyFeeling;
+
         return cell
     }
+    */
 
     /*
     // Override to support conditional editing of the table view.

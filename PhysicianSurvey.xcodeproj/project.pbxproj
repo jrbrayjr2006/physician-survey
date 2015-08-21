@@ -18,6 +18,9 @@
 		B75435FA1B86A9CA00254EA1 /* WhyFeelingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75435F91B86A9CA00254EA1 /* WhyFeelingViewController.swift */; };
 		B75435FC1B86AA0900254EA1 /* WorkDissatisfactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75435FB1B86AA0900254EA1 /* WorkDissatisfactionViewController.swift */; };
 		B75435FE1B86AAF900254EA1 /* WhyFeelingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75435FD1B86AAF900254EA1 /* WhyFeelingTableViewCell.swift */; };
+		B755A30B1B86D82A00FA01E4 /* OperationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B755A30A1B86D82A00FA01E4 /* OperationsTableViewCell.swift */; };
+		B755A30D1B86D85500FA01E4 /* OperationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B755A30C1B86D85500FA01E4 /* OperationsTableViewController.swift */; };
+		B755A30F1B86D9D900FA01E4 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B755A30E1B86D9D900FA01E4 /* Survey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		B75435F91B86A9CA00254EA1 /* WhyFeelingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhyFeelingViewController.swift; sourceTree = "<group>"; };
 		B75435FB1B86AA0900254EA1 /* WorkDissatisfactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkDissatisfactionViewController.swift; sourceTree = "<group>"; };
 		B75435FD1B86AAF900254EA1 /* WhyFeelingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhyFeelingTableViewCell.swift; sourceTree = "<group>"; };
+		B755A30A1B86D82A00FA01E4 /* OperationsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationsTableViewCell.swift; sourceTree = "<group>"; };
+		B755A30C1B86D85500FA01E4 /* OperationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationsTableViewController.swift; sourceTree = "<group>"; };
+		B755A30E1B86D9D900FA01E4 /* Survey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,9 @@
 				B75435F91B86A9CA00254EA1 /* WhyFeelingViewController.swift */,
 				B75435FB1B86AA0900254EA1 /* WorkDissatisfactionViewController.swift */,
 				B7061E851B6F12BB004295C6 /* Main.storyboard */,
+				B755A30A1B86D82A00FA01E4 /* OperationsTableViewCell.swift */,
+				B755A30C1B86D85500FA01E4 /* OperationsTableViewController.swift */,
+				B755A30E1B86D9D900FA01E4 /* Survey.swift */,
 				B75435FD1B86AAF900254EA1 /* WhyFeelingTableViewCell.swift */,
 				B70AE33E1B8657D40079DAD6 /* EmotionalIntelligenceViewController.swift */,
 				B7061E881B6F12BB004295C6 /* Images.xcassets */,
@@ -236,8 +245,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B755A30F1B86D9D900FA01E4 /* Survey.swift in Sources */,
 				B7061E841B6F12BB004295C6 /* ViewController.swift in Sources */,
+				B755A30D1B86D85500FA01E4 /* OperationsTableViewController.swift in Sources */,
 				B75435FE1B86AAF900254EA1 /* WhyFeelingTableViewCell.swift in Sources */,
+				B755A30B1B86D82A00FA01E4 /* OperationsTableViewCell.swift in Sources */,
 				B7061E821B6F12BB004295C6 /* AppDelegate.swift in Sources */,
 				B75435FC1B86AA0900254EA1 /* WorkDissatisfactionViewController.swift in Sources */,
 				B75435FA1B86A9CA00254EA1 /* WhyFeelingViewController.swift in Sources */,
