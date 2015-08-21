@@ -13,6 +13,11 @@
 		B7061E891B6F12BB004295C6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7061E881B6F12BB004295C6 /* Images.xcassets */; };
 		B7061E8C1B6F12BB004295C6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7061E8A1B6F12BB004295C6 /* LaunchScreen.xib */; };
 		B7061E981B6F12BB004295C6 /* PhysicianSurveyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7061E971B6F12BB004295C6 /* PhysicianSurveyTests.swift */; };
+		B70AE33D1B8654030079DAD6 /* sound_physicians_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B70AE33C1B8654030079DAD6 /* sound_physicians_logo.png */; };
+		B70AE33F1B8657D40079DAD6 /* EmotionalIntelligenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70AE33E1B8657D40079DAD6 /* EmotionalIntelligenceViewController.swift */; };
+		B75435FA1B86A9CA00254EA1 /* WhyFeelingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75435F91B86A9CA00254EA1 /* WhyFeelingViewController.swift */; };
+		B75435FC1B86AA0900254EA1 /* WorkDissatisfactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75435FB1B86AA0900254EA1 /* WorkDissatisfactionViewController.swift */; };
+		B75435FE1B86AAF900254EA1 /* WhyFeelingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75435FD1B86AAF900254EA1 /* WhyFeelingTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,11 @@
 		B7061E911B6F12BB004295C6 /* PhysicianSurveyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhysicianSurveyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7061E961B6F12BB004295C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7061E971B6F12BB004295C6 /* PhysicianSurveyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicianSurveyTests.swift; sourceTree = "<group>"; };
+		B70AE33C1B8654030079DAD6 /* sound_physicians_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sound_physicians_logo.png; sourceTree = "<group>"; };
+		B70AE33E1B8657D40079DAD6 /* EmotionalIntelligenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionalIntelligenceViewController.swift; sourceTree = "<group>"; };
+		B75435F91B86A9CA00254EA1 /* WhyFeelingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhyFeelingViewController.swift; sourceTree = "<group>"; };
+		B75435FB1B86AA0900254EA1 /* WorkDissatisfactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkDissatisfactionViewController.swift; sourceTree = "<group>"; };
+		B75435FD1B86AAF900254EA1 /* WhyFeelingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhyFeelingTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +69,7 @@
 		B7061E731B6F12BB004295C6 = {
 			isa = PBXGroup;
 			children = (
+				B70AE33B1B8653D80079DAD6 /* images */,
 				B7061E7E1B6F12BB004295C6 /* PhysicianSurvey */,
 				B7061E941B6F12BB004295C6 /* PhysicianSurveyTests */,
 				B7061E7D1B6F12BB004295C6 /* Products */,
@@ -79,7 +90,11 @@
 			children = (
 				B7061E811B6F12BB004295C6 /* AppDelegate.swift */,
 				B7061E831B6F12BB004295C6 /* ViewController.swift */,
+				B75435F91B86A9CA00254EA1 /* WhyFeelingViewController.swift */,
+				B75435FB1B86AA0900254EA1 /* WorkDissatisfactionViewController.swift */,
 				B7061E851B6F12BB004295C6 /* Main.storyboard */,
+				B75435FD1B86AAF900254EA1 /* WhyFeelingTableViewCell.swift */,
+				B70AE33E1B8657D40079DAD6 /* EmotionalIntelligenceViewController.swift */,
 				B7061E881B6F12BB004295C6 /* Images.xcassets */,
 				B7061E8A1B6F12BB004295C6 /* LaunchScreen.xib */,
 				B7061E7F1B6F12BB004295C6 /* Supporting Files */,
@@ -110,6 +125,14 @@
 				B7061E961B6F12BB004295C6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B70AE33B1B8653D80079DAD6 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				B70AE33C1B8654030079DAD6 /* sound_physicians_logo.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +218,7 @@
 				B7061E871B6F12BB004295C6 /* Main.storyboard in Resources */,
 				B7061E8C1B6F12BB004295C6 /* LaunchScreen.xib in Resources */,
 				B7061E891B6F12BB004295C6 /* Images.xcassets in Resources */,
+				B70AE33D1B8654030079DAD6 /* sound_physicians_logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +237,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7061E841B6F12BB004295C6 /* ViewController.swift in Sources */,
+				B75435FE1B86AAF900254EA1 /* WhyFeelingTableViewCell.swift in Sources */,
 				B7061E821B6F12BB004295C6 /* AppDelegate.swift in Sources */,
+				B75435FC1B86AA0900254EA1 /* WorkDissatisfactionViewController.swift in Sources */,
+				B75435FA1B86A9CA00254EA1 /* WhyFeelingViewController.swift in Sources */,
+				B70AE33F1B8657D40079DAD6 /* EmotionalIntelligenceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +439,7 @@
 				B7061E9D1B6F12BB004295C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B7061E9E1B6F12BB004295C6 /* Build configuration list for PBXNativeTarget "PhysicianSurveyTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +448,7 @@
 				B7061EA01B6F12BB004295C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

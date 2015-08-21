@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gCT-GF-yjg">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PhysicianSurvey" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,197 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sound_physicians_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Y83-b3-Wzj">
+                                <rect key="frame" x="180" y="84" width="240" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txE-qE-T96">
+                                <rect key="frame" x="254" y="550" width="92" height="30"/>
+                                <state key="normal" title="Go To Survey">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToSurveyOnTouchUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dyo-1X-abY"/>
+                                    <segue destination="KeU-92-VdU" kind="show" id="Zag-Bn-wer"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwA-rx-RCs">
+                                <rect key="frame" x="16" y="406" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Y83-b3-Wzj" secondAttribute="centerX" id="06q-4U-bDn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="txE-qE-T96" secondAttribute="bottom" constant="20" id="N8R-YC-ggs"/>
+                            <constraint firstItem="rwA-rx-RCs" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="XIM-H1-hRP"/>
+                            <constraint firstItem="rwA-rx-RCs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Yte-mf-Nzf"/>
+                            <constraint firstAttribute="centerX" secondItem="txE-qE-T96" secondAttribute="centerX" id="aaE-I4-xkq"/>
+                            <constraint firstAttribute="centerX" secondItem="txE-qE-T96" secondAttribute="centerX" id="tGJ-l4-jIT"/>
+                            <constraint firstItem="Y83-b3-Wzj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="tae-25-btZ"/>
+                            <constraint firstItem="rwA-rx-RCs" firstAttribute="top" secondItem="Y83-b3-Wzj" secondAttribute="bottom" constant="194" id="uO6-9l-A2i"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Welcome" id="Dbl-ev-Icd"/>
+                    <connections>
+                        <outlet property="welcomeMessageLabel" destination="rwA-rx-RCs" id="jmW-m8-YZn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1057" y="324"/>
+        </scene>
+        <!--Emotional Intelligence-->
+        <scene sceneID="j7K-PG-zrf">
+            <objects>
+                <viewController storyboardIdentifier="emotionalIntelligenceViewController" id="YRo-tT-mmS" customClass="EmotionalIntelligenceViewController" customModule="PhysicianSurvey" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WoU-ug-1WS"/>
+                        <viewControllerLayoutGuide type="bottom" id="kyG-ZP-P69"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Aw-9C-er4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xod-YB-6j1">
+                                <rect key="frame" x="0.0" y="114" width="600" height="162"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="YRo-tT-mmS" id="Aif-F8-J52"/>
+                                    <outlet property="delegate" destination="YRo-tT-mmS" id="X5D-4P-AgQ"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0SR-Jf-2Yx">
+                                <rect key="frame" x="16" y="550" width="568" height="30"/>
+                                <state key="normal" title="Provide Details">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="provideDetailsOnTouchUp:" destination="YRo-tT-mmS" eventType="touchUpInside" id="Mbz-CZ-YKH"/>
+                                    <segue destination="sLZ-J6-2HQ" kind="show" id="xmj-Ro-Vpm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kyG-ZP-P69" firstAttribute="top" secondItem="0SR-Jf-2Yx" secondAttribute="bottom" constant="20" id="FZC-v3-c6A"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xod-YB-6j1" secondAttribute="trailing" constant="-16" id="Lex-VF-jmA"/>
+                            <constraint firstItem="0SR-Jf-2Yx" firstAttribute="leading" secondItem="7Aw-9C-er4" secondAttribute="leadingMargin" id="Sj0-hw-c70"/>
+                            <constraint firstItem="0SR-Jf-2Yx" firstAttribute="trailing" secondItem="7Aw-9C-er4" secondAttribute="trailingMargin" id="TGX-sR-5m3"/>
+                            <constraint firstItem="xod-YB-6j1" firstAttribute="leading" secondItem="7Aw-9C-er4" secondAttribute="leadingMargin" constant="-16" id="mN6-Bm-5ga"/>
+                            <constraint firstItem="xod-YB-6j1" firstAttribute="top" secondItem="WoU-ug-1WS" secondAttribute="bottom" constant="50" id="pyb-ED-BNW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Emotional Intelligence" id="3xE-gB-Dh0"/>
+                    <connections>
+                        <outlet property="feelingPicker" destination="xod-YB-6j1" id="sdF-3I-Twb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l6q-Ym-EAh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2610" y="324"/>
+        </scene>
+        <!--Why Do You Feel This Way-->
+        <scene sceneID="2df-9I-RgZ">
+            <objects>
+                <tableViewController id="sLZ-J6-2HQ" customClass="WhyFeelingViewController" customModule="PhysicianSurvey" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Awh-sp-iXd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="whyFeelingTableViewCell" id="yNT-a7-21Y" customClass="WhyFeelingTableViewCell" customModule="PhysicianSurvey" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yNT-a7-21Y" id="Hxp-Wg-grq">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7za-0K-8UE">
+                                            <rect key="frame" x="8" y="11" width="481" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="whyFeelingLabel" destination="7za-0K-8UE" id="Sz3-hb-qaT"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="sLZ-J6-2HQ" id="c4R-s3-FqV"/>
+                            <outlet property="delegate" destination="sLZ-J6-2HQ" id="No5-fs-rio"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Why Do You Feel This Way" id="GHe-Ch-Sl1"/>
+                    <connections>
+                        <outlet property="whyFeelingTableView" destination="Awh-sp-iXd" id="jwu-p4-boq"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fMC-I6-23J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4095" y="338"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ntm-wf-PCo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gCT-GF-yjg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vse-4R-Dlw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="MuV-wq-xyV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="piQ-Q2-XIw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="311" y="324"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ICw-Wp-mYe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KeU-92-VdU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wn6-t3-g3v">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YRo-tT-mmS" kind="relationship" relationship="rootViewController" id="eha-RW-yV9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dLd-v6-wkn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1798" y="324"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="X3L-Yl-PPf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wKK-iP-ZeR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="C2h-bP-I26">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sLZ-J6-2HQ" kind="relationship" relationship="rootViewController" id="Xqw-Jk-n1O"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SpT-Zs-mLJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3283" y="338"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sound_physicians_logo.png" width="240" height="128"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="xmj-Ro-Vpm"/>
+    </inferredMetricsTieBreakers>
 </document>
