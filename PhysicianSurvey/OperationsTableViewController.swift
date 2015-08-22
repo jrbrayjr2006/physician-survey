@@ -13,6 +13,7 @@ class OperationsTableViewController: UITableViewController {
     var hospitalOperationsArray : [String] = ["Nursing", "Consultants", "Operator", "Paging", "Dictation", "Queries", "Rapid Response/Codes", "PCP’s", "Case Managers"];
     var soundOperationsArray : [String] = ["Leadership", "Sound Connect", "Fellow Hospitalists"];
     var survey :Survey = Survey.sharedFavoriteList;
+    var selectedFeeling : String?;
     
     @IBOutlet var operationsTableView: UITableView!
 
@@ -26,6 +27,8 @@ class OperationsTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         self.operationsTableView.registerClass(OperationsTableViewCell.self, forCellReuseIdentifier: "operationsTableViewCell");
+        self.selectedFeeling = survey.whyFeeling!;
+        self.title = self.selectedFeeling;
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,18 +47,41 @@ class OperationsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        
+        // add logic to select which array to use
+        if selectedFeeling == "Hospital Operations" {
+            return hospitalOperationsArray.count;
+        }
+        else {
+            return soundOperationsArray.count;
+        }
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
-
+        let cellIdentifier : String = "operationsTableViewCell";
+        let cell: OperationsTableViewCell = self.operationsTableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! OperationsTableViewCell;
+        
+        var operations : String?;
+        
         // Configure the cell...
-
+        if selectedFeeling == "Hospital Operations"  {
+            operations = String(hospitalOperationsArray[indexPath.row]) as String;
+            println(operations!);
+        }
+        else {
+            operations = String(soundOperationsArray[indexPath.row]) as String;
+            println(operations!);
+        }
+        
+        //var operations : String = String(soundOperationsArray[indexPath.row]) as String;
+        
+        //cell.accessoryType = UITableViewCellAccessoryType.DetailButton;
+        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator;
+        //cell.operationsCellLabel!.description = "";
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.

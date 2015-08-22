@@ -10,6 +10,8 @@ import UIKit
 
 class OperationsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var operationsCellLabel: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

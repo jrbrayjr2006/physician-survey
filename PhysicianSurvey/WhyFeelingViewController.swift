@@ -12,6 +12,8 @@ class WhyFeelingViewController: UITableViewController {
     
     private var whyFeelingArray : [String] = ["Hospital Operations", "Sound Operations"];
     
+    var selectedFeelingToPass : String = "Test";
+    
     var survey : Survey = Survey.sharedFavoriteList;
 
     @IBOutlet var whyFeelingTableView: UITableView!
@@ -58,6 +60,31 @@ class WhyFeelingViewController: UITableViewController {
         cell.whyFeelingLabel!.text = strWhyFeeling;
         return cell
     }
+    
+    /*
+    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        println("You selected cell #\(indexPath.row)!")
+        
+        // Get Cell Label
+        let indexPath = tableView.indexPathForSelectedRow();
+        
+        let currentCell : WhyFeelingTableViewCell = tableView.cellForRowAtIndexPath(indexPath!) as! WhyFeelingTableViewCell!;
+        self.selectedFeelingToPass = currentCell.whyFeelingLabel.text!;
+        println("You selected cell #\(self.selectedFeelingToPass)!")
+    }
+    */
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        println("You selected cell #\(indexPath.row)!")
+        
+        // Get Cell Label
+        let indexPath = tableView.indexPathForSelectedRow();
+        
+        let currentCell : WhyFeelingTableViewCell = tableView.cellForRowAtIndexPath(indexPath!) as! WhyFeelingTableViewCell!;
+        self.selectedFeelingToPass = currentCell.whyFeelingLabel.text!;
+        survey.whyFeeling = self.selectedFeelingToPass;
+        println("You selected cell #\(self.selectedFeelingToPass)!")
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -94,14 +121,19 @@ class WhyFeelingViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        // Pass the selected object to the new view controller.     whyFeelToOperationsSegue
+        if(segue.identifier == "whyFeelToOperationsSegue") {
+            var svc = segue.destinationViewController as! OperationsTableViewController;
+            println("prepareForSegue:  You selected cell #\(self.selectedFeelingToPass)!")
+            //svc.selectedFeeling = self.selectedFeelingToPass;
+        }
     }
-    */
+
 
 }

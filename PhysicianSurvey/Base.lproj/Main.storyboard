@@ -27,7 +27,7 @@
                                 </state>
                                 <connections>
                                     <action selector="goToSurveyOnTouchUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dyo-1X-abY"/>
-                                    <segue destination="KeU-92-VdU" kind="show" id="Zag-Bn-wer"/>
+                                    <segue destination="KeU-92-VdU" kind="show" identifier="emotionalIntelToWyFeelingSegue" id="Zag-Bn-wer"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwA-rx-RCs">
@@ -131,7 +131,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="whyFeelingLabel" destination="7za-0K-8UE" id="Sz3-hb-qaT"/>
-                                    <segue destination="eV7-TF-ehU" kind="show" id="ufF-Wh-G4A"/>
+                                    <segue destination="eV7-TF-ehU" kind="show" identifier="whyFeelToOperationsSegue" id="ufF-Wh-G4A"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -158,11 +158,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ZZ2-hC-UYM" customClass="OperationsTableViewCell" customModule="PhysicianSurvey" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="operationsTableViewCell" id="ZZ2-hC-UYM" customClass="OperationsTableViewCell" customModule="PhysicianSurvey" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZZ2-hC-UYM" id="kLn-0D-vYW">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eul-6L-p6M">
+                                            <rect key="frame" x="8" y="11" width="483" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="operationsCellLabel" destination="kLn-0D-vYW" id="pDU-vq-O1S"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -237,6 +248,6 @@
         <image name="sound_physicians_logo.png" width="240" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xmj-Ro-Vpm"/>
+        <segue reference="Xqw-Jk-n1O"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -12,6 +12,7 @@ import UIKit
 class Survey: NSObject {
     
     var score : Int?;
+    var whyFeeling : String?;
     var operation : String?;
     var comments : String?;
     
