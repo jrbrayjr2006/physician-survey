@@ -76,6 +76,7 @@ class OperationsTableViewController: UITableViewController {
         
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator;
         cell.textLabel?.text = operations!;
+        survey.operation = operations!;
         return cell
     }
 

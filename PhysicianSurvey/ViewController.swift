@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     private func showMessage() -> Void {
         var alertView:UIAlertView = UIAlertView();
         alertView.title = "Proceed to Survey"
-        alertView.message = "The emotional intelligence survey will now begin"
+        alertView.message = "The emotional intelligence survey will now begin.  Select a score from 1 to 10. 1 indicates not satisfied at all and 10 indicates completely satisfied."
         alertView.delegate = self
         alertView.addButtonWithTitle("OK")
         alertView.show()

@@ -21,6 +21,8 @@
 		B755A30B1B86D82A00FA01E4 /* OperationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B755A30A1B86D82A00FA01E4 /* OperationsTableViewCell.swift */; };
 		B755A30D1B86D85500FA01E4 /* OperationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B755A30C1B86D85500FA01E4 /* OperationsTableViewController.swift */; };
 		B755A30F1B86D9D900FA01E4 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B755A30E1B86D9D900FA01E4 /* Survey.swift */; };
+		B773FCBC1B8A4D1600066EF1 /* NetworkDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B773FCBB1B8A4D1600066EF1 /* NetworkDelegate.swift */; };
+		B773FCBE1B8A52BC00066EF1 /* ReasonOperationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B773FCBD1B8A52BC00066EF1 /* ReasonOperationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		B755A30A1B86D82A00FA01E4 /* OperationsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationsTableViewCell.swift; sourceTree = "<group>"; };
 		B755A30C1B86D85500FA01E4 /* OperationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationsTableViewController.swift; sourceTree = "<group>"; };
 		B755A30E1B86D9D900FA01E4 /* Survey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
+		B773FCBB1B8A4D1600066EF1 /* NetworkDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDelegate.swift; sourceTree = "<group>"; };
+		B773FCBD1B8A52BC00066EF1 /* ReasonOperationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReasonOperationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 				B7061E881B6F12BB004295C6 /* Images.xcassets */,
 				B7061E8A1B6F12BB004295C6 /* LaunchScreen.xib */,
 				B7061E7F1B6F12BB004295C6 /* Supporting Files */,
+				B773FCBB1B8A4D1600066EF1 /* NetworkDelegate.swift */,
+				B773FCBD1B8A52BC00066EF1 /* ReasonOperationViewController.swift */,
 			);
 			path = PhysicianSurvey;
 			sourceTree = "<group>";
@@ -246,6 +252,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B755A30F1B86D9D900FA01E4 /* Survey.swift in Sources */,
+				B773FCBE1B8A52BC00066EF1 /* ReasonOperationViewController.swift in Sources */,
+				B773FCBC1B8A4D1600066EF1 /* NetworkDelegate.swift in Sources */,
 				B7061E841B6F12BB004295C6 /* ViewController.swift in Sources */,
 				B755A30D1B86D85500FA01E4 /* OperationsTableViewController.swift in Sources */,
 				B75435FE1B86AAF900254EA1 /* WhyFeelingTableViewCell.swift in Sources */,
