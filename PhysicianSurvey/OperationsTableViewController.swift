@@ -74,11 +74,8 @@ class OperationsTableViewController: UITableViewController {
             println(operations!);
         }
         
-        //var operations : String = String(soundOperationsArray[indexPath.row]) as String;
-        
-        //cell.accessoryType = UITableViewCellAccessoryType.DetailButton;
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator;
-        //cell.operationsCellLabel!.description = "";
+        cell.textLabel?.text = operations!;
         return cell
     }
 
