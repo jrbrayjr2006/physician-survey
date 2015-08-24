@@ -21,6 +21,8 @@
 		B755A30B1B86D82A00FA01E4 /* OperationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B755A30A1B86D82A00FA01E4 /* OperationsTableViewCell.swift */; };
 		B755A30D1B86D85500FA01E4 /* OperationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B755A30C1B86D85500FA01E4 /* OperationsTableViewController.swift */; };
 		B755A30F1B86D9D900FA01E4 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B755A30E1B86D9D900FA01E4 /* Survey.swift */; };
+		B7722C781B8A986A00A858E5 /* ReasonOperationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7722C771B8A986A00A858E5 /* ReasonOperationTableViewCell.swift */; };
+		B7722C7A1B8A9A2900A858E5 /* CompleteSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7722C791B8A9A2900A858E5 /* CompleteSurveyViewController.swift */; };
 		B773FCBC1B8A4D1600066EF1 /* NetworkDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B773FCBB1B8A4D1600066EF1 /* NetworkDelegate.swift */; };
 		B773FCBE1B8A52BC00066EF1 /* ReasonOperationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B773FCBD1B8A52BC00066EF1 /* ReasonOperationViewController.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +56,8 @@
 		B755A30A1B86D82A00FA01E4 /* OperationsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationsTableViewCell.swift; sourceTree = "<group>"; };
 		B755A30C1B86D85500FA01E4 /* OperationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationsTableViewController.swift; sourceTree = "<group>"; };
 		B755A30E1B86D9D900FA01E4 /* Survey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
+		B7722C771B8A986A00A858E5 /* ReasonOperationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReasonOperationTableViewCell.swift; sourceTree = "<group>"; };
+		B7722C791B8A9A2900A858E5 /* CompleteSurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompleteSurveyViewController.swift; sourceTree = "<group>"; };
 		B773FCBB1B8A4D1600066EF1 /* NetworkDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDelegate.swift; sourceTree = "<group>"; };
 		B773FCBD1B8A52BC00066EF1 /* ReasonOperationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReasonOperationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,6 +117,8 @@
 				B7061E7F1B6F12BB004295C6 /* Supporting Files */,
 				B773FCBB1B8A4D1600066EF1 /* NetworkDelegate.swift */,
 				B773FCBD1B8A52BC00066EF1 /* ReasonOperationViewController.swift */,
+				B7722C791B8A9A2900A858E5 /* CompleteSurveyViewController.swift */,
+				B7722C771B8A986A00A858E5 /* ReasonOperationTableViewCell.swift */,
 			);
 			path = PhysicianSurvey;
 			sourceTree = "<group>";
@@ -260,6 +266,8 @@
 				B755A30B1B86D82A00FA01E4 /* OperationsTableViewCell.swift in Sources */,
 				B7061E821B6F12BB004295C6 /* AppDelegate.swift in Sources */,
 				B75435FC1B86AA0900254EA1 /* WorkDissatisfactionViewController.swift in Sources */,
+				B7722C781B8A986A00A858E5 /* ReasonOperationTableViewCell.swift in Sources */,
+				B7722C7A1B8A9A2900A858E5 /* CompleteSurveyViewController.swift in Sources */,
 				B75435FA1B86A9CA00254EA1 /* WhyFeelingViewController.swift in Sources */,
 				B70AE33F1B8657D40079DAD6 /* EmotionalIntelligenceViewController.swift in Sources */,
 			);

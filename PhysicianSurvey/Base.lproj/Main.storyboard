@@ -131,7 +131,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="whyFeelingLabel" destination="7za-0K-8UE" id="Sz3-hb-qaT"/>
-                                    <segue destination="eV7-TF-ehU" kind="show" identifier="whyFeelToOperationsSegue" id="ufF-Wh-G4A"/>
+                                    <segue destination="QZf-S3-yM2" kind="show" id="MHj-Xk-HeH"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -158,7 +158,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="operationsTableViewCell" id="ZZ2-hC-UYM" customClass="OperationsTableViewCell" customModule="PhysicianSurvey" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="operationsTableViewCell" id="ZZ2-hC-UYM" customClass="OperationsTableViewCell" customModule="PhysicianSurvey" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZZ2-hC-UYM" id="kLn-0D-vYW">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -173,6 +173,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="operationsCellLabel" destination="kLn-0D-vYW" id="pDU-vq-O1S"/>
+                                    <segue destination="PFb-qS-KsI" kind="show" identifier="operationsToReasonSegue" id="mdW-mE-BuJ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -181,13 +182,87 @@
                             <outlet property="delegate" destination="eV7-TF-ehU" id="HjM-we-xBz"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="Q6d-O8-euL"/>
                     <connections>
                         <outlet property="operationsTableView" destination="JR7-GI-FYd" id="8U4-Sa-5sY"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ScX-OZ-JdR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4752" y="338"/>
+            <point key="canvasLocation" x="5628" y="338"/>
+        </scene>
+        <!--Reason Operation View Controller-->
+        <scene sceneID="y8r-wf-rnp">
+            <objects>
+                <viewController storyboardIdentifier="reasonOperationViewController" id="PFb-qS-KsI" customClass="ReasonOperationViewController" customModule="PhysicianSurvey" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mkd-td-ckl"/>
+                        <viewControllerLayoutGuide type="bottom" id="1MA-jW-0av"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jDo-8Q-Ohg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="kcI-hF-6kH">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" id="80u-CR-heQ" customClass="ReasonOperationTableViewCell" customModule="PhysicianSurvey" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="80u-CR-heQ" id="xW4-Kt-e4w">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="m55-Jn-ZMx" kind="show" id="jRl-Fv-bQ4"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="PFb-qS-KsI" id="6x2-lE-LT4"/>
+                                    <outlet property="delegate" destination="PFb-qS-KsI" id="2T8-DU-Lun"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="reasonOperationTableView" destination="kcI-hF-6kH" id="31X-gv-UkH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KDf-NQ-Kua" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6327" y="338"/>
+        </scene>
+        <!--Complete Survey View Controller-->
+        <scene sceneID="eTW-N8-etb">
+            <objects>
+                <viewController id="m55-Jn-ZMx" customClass="CompleteSurveyViewController" customModule="PhysicianSurvey" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sHv-wz-upE"/>
+                        <viewControllerLayoutGuide type="bottom" id="N8v-CJ-kVp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zWR-fT-cCo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWk-Zg-cEg">
+                                <rect key="frame" x="16" y="285" width="568" height="30"/>
+                                <state key="normal" title="Confirm Survey Complete">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MWk-Zg-cEg" firstAttribute="trailing" secondItem="zWR-fT-cCo" secondAttribute="trailingMargin" id="C6s-RM-1f3"/>
+                            <constraint firstItem="MWk-Zg-cEg" firstAttribute="leading" secondItem="zWR-fT-cCo" secondAttribute="leadingMargin" id="FaI-tp-6WP"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9lf-4M-vkS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7005" y="338"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ntm-wf-PCo">
@@ -243,11 +318,29 @@
             </objects>
             <point key="canvasLocation" x="3283" y="338"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Yem-8m-CZJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QZf-S3-yM2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zp4-q0-LEc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eV7-TF-ehU" kind="relationship" relationship="rootViewController" id="kVP-T5-pWm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wbn-fC-W7X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4816" y="338"/>
+        </scene>
     </scenes>
     <resources>
         <image name="sound_physicians_logo.png" width="240" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Xqw-Jk-n1O"/>
+        <segue reference="xmj-Ro-Vpm"/>
     </inferredMetricsTieBreakers>
 </document>
