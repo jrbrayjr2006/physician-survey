@@ -14,9 +14,12 @@ class ReasonOperationViewController: UIViewController, UITableViewDelegate, UITa
     private var leadershipArray : [String] = ["I’m Frustrated With The Chief", "The Chief Is Not Listening To My Concerns", "The Chief Is Not Seeing Enough Patients"];
     private var soundConnectArray : [String] = ["Poor Log On Time", "Too Many Hard Stops", "Too Complicated", "Cannot Find Codes", "Not Capturing Data", "Poor Facesheet Capture"];
     private var hospitalistsArray : [String] = ["Dumping", "Poor Signouts", "Illegible Notes To Follow", "Leaving Billing Gaps"];
+    private var nursingArray : [String] = ["Dismissive", "Too many pages", "Ganging up on me", "Confused who is following specific patients"];
     
     // default dummy data
     private var reasons : [String] = ["reason1", "reason2"];
+    
+    var options : [String]?;
     
     var reason : String?;
     
@@ -42,13 +45,29 @@ class ReasonOperationViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch(survey.operation!) {
+        case "Leadership":
+            options = leadershipArray;
+            break;
+        case "Sound Connect":
+            options = soundConnectArray;
+            break;
+        case "Fellow Hospitalists":
+            options = hospitalistsArray;
+            break;
+        case "Nursing":
+            options = nursingArray;
+        default:
+            options = reasons;
+            
+        }
         switch(section) {
         case 0:
-            return reasons.count;
+            return options!.count;
         case 1:
             return 1;
         default:
-            return reasons.count;
+            return options!.count;
         }
     }
     
@@ -57,7 +76,24 @@ class ReasonOperationViewController: UIViewController, UITableViewDelegate, UITa
         //let otherCellIdentifier : String = "otherOperationTableViewCell";
         var cell : ReasonOperationTableViewCell = self.reasonOperationTableView.dequeueReusableCellWithIdentifier(cellIndentifier) as! ReasonOperationTableViewCell;
         
-        let strReason : String = String(reasons[indexPath.row]) as String;
+        switch(survey.operation!) {
+            case "Leadership":
+                options = leadershipArray;
+                break;
+            case "Sound Connect":
+                options = soundConnectArray;
+                break;
+            case "Fellow Hospitalists":
+                options = hospitalistsArray;
+                break;
+            case "Nursing":
+                options = nursingArray;
+            default:
+                options = reasons;
+            
+        }
+        
+        let strReason : String = String(options![indexPath.row]) as String;
         cell.textLabel?.text = strReason;
         
         if(indexPath.section == 1) {
@@ -79,7 +115,15 @@ class ReasonOperationViewController: UIViewController, UITableViewDelegate, UITa
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         println("Selected row at index: \(indexPath.row)");
         
-        survey.reason = "TBD"; // reason!;
+        if(commentTextField != nil) {
+            survey.comments = commentTextField?.text;
+            println(commentTextField?.text);
+        }
+        
+        reason = String(options![indexPath.row]) as String;
+        
+        survey.reason = reason!;
+        println("The reason is " + reason!);
         self.performSegueWithIdentifier("reasonOperationToCompleteSegue", sender: self);
     }
     
