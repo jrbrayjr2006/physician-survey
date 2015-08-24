@@ -9,6 +9,8 @@
 import UIKit
 
 class CompleteSurveyViewController: UIViewController {
+    
+    var survey : Survey = Survey.sharedFavoriteList;
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,12 @@ class CompleteSurveyViewController: UIViewController {
     }
     
 
+    @IBAction func completeSurveyOnTouchUp(sender: UIButton) {
+        println("Survey Complete!");
+        
+        showMessage();
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -31,5 +39,15 @@ class CompleteSurveyViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    private func showMessage() -> Void {
+        var alertView:UIAlertView = UIAlertView();
+        alertView.title = "Survey Complete"
+        alertView.message = "You have completed the survey.  You may now close the application."
+        alertView.delegate = self
+        alertView.addButtonWithTitle("OK")
+        alertView.show()
+        return;
+    }
 
 }

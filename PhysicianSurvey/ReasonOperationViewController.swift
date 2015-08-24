@@ -11,7 +11,14 @@ import UIKit
 class ReasonOperationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var survey :Survey = Survey.sharedFavoriteList;
-    private var reasons : [String] = ["test1", "test2"];
+    private var leadershipArray : [String] = ["I’m Frustrated With The Chief", "The Chief Is Not Listening To My Concerns", "The Chief Is Not Seeing Enough Patients"];
+    private var soundConnectArray : [String] = ["Poor Log On Time", "Too Many Hard Stops", "Too Complicated", "Cannot Find Codes", "Not Capturing Data", "Poor Facesheet Capture"];
+    private var hospitalistsArray : [String] = ["Dumping", "Poor Signouts", "Illegible Notes To Follow", "Leaving Billing Gaps"];
+    
+    // default dummy data
+    private var reasons : [String] = ["reason1", "reason2"];
+    
+    var reason : String?;
     
     var commentTextField : UITextField?
     
@@ -71,6 +78,9 @@ class ReasonOperationViewController: UIViewController, UITableViewDelegate, UITa
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         println("Selected row at index: \(indexPath.row)");
+        
+        survey.reason = "TBD"; // reason!;
+        self.performSegueWithIdentifier("reasonOperationToCompleteSegue", sender: self);
     }
     
 

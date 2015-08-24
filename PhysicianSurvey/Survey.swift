@@ -14,6 +14,7 @@ class Survey: NSObject {
     var score : Int?;
     var whyFeeling : String?;
     var operation : String?;
+    var reason : String?;
     var comments : String?;
     
     class var sharedFavoriteList : Survey {
