@@ -15,6 +15,14 @@ class ReasonOperationViewController: UIViewController, UITableViewDelegate, UITa
     private var soundConnectArray : [String] = ["Poor Log On Time", "Too Many Hard Stops", "Too Complicated", "Cannot Find Codes", "Not Capturing Data", "Poor Facesheet Capture"];
     private var hospitalistsArray : [String] = ["Dumping", "Poor Signouts", "Illegible Notes To Follow", "Leaving Billing Gaps"];
     private var nursingArray : [String] = ["Dismissive", "Too many pages", "Ganging up on me", "Confused who is following specific patients"];
+    private var consultantsArray : [String] = ["Dismissive", "Not responding to my request", "I cannot understand the consultant’s plan of care", "Consultant asked me to discharge the patient they admitted", "Consultant discharged the patient I admitted without speaking with me"];
+    private var operatorArray : [String] = ["Does not know who is on call", "Does not know who is covering patient’s on our service", "Calling the wrong pagers", "Not answering the phone"];
+    private var pagingArray : [String] = ["My pager is not working", "This pager will not stop beeping", "I picked up the wrong pager", "Nurses are paging the wrong pager"];
+    private var dictationArray : [String] = ["My dictation was not transcribed", "My dictation was lost", "Dictation was transcribed improperly"];
+    private var queriesArray : [String] = ["Query people are bothering me", "I cannot understand what the request is", "I have too many queries", "I disagree with many of the requests", "I’m getting querie that belong to other departments"];
+    private var rrCodesArray : [String] = ["Poor communication between team members", "Equipment slow to arrive", "No pharmacist at codes", "Too many docs trying to run the code"];
+    private var pcpsArray : [String] = ["Disagreeing with the care provider", "Demanding prolonged stay for additional testing", "Not accepting their patient’s back"];
+    private var caseManagersArray : [String] = ["Not communicating barriers to DC", "SNF’s not setup in a timely fashion", "Cannot find case manager notes"];
     
     // default dummy data
     private var reasons : [String] = ["reason1", "reason2"];
@@ -46,19 +54,44 @@ class ReasonOperationViewController: UIViewController, UITableViewDelegate, UITa
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch(survey.operation!) {
-        case "Leadership":
-            options = leadershipArray;
-            break;
-        case "Sound Connect":
-            options = soundConnectArray;
-            break;
-        case "Fellow Hospitalists":
-            options = hospitalistsArray;
-            break;
-        case "Nursing":
-            options = nursingArray;
-        default:
-            options = reasons;
+            case "Leadership":
+                options = leadershipArray;
+                break;
+            case "Sound Connect":
+                options = soundConnectArray;
+                break;
+            case "Fellow Hospitalists":
+                options = hospitalistsArray;
+                break;
+            case "Nursing":
+                options = nursingArray;
+                break;
+            case "Consultants":
+                options = consultantsArray;
+                break;
+            case "Operator":
+                options = operatorArray;
+                break;
+            case "Paging":
+                options = pagingArray;
+                break;
+            case "Dictation":
+                options = dictationArray;
+                break;
+            case "Queries":
+                options = queriesArray;
+                break;
+            case "Rapid Response/Codes":
+                options = rrCodesArray;
+                break;
+            case "PCP’s":
+                options = pcpsArray;
+                break;
+            case "Case Managers":
+                options = caseManagersArray;
+                break;
+            default:
+                options = reasons;
             
         }
         switch(section) {
@@ -88,6 +121,31 @@ class ReasonOperationViewController: UIViewController, UITableViewDelegate, UITa
                 break;
             case "Nursing":
                 options = nursingArray;
+                break;
+            case "Consultants":
+                options = consultantsArray;
+                break;
+            case "Operator":
+                options = operatorArray;
+                break;
+            case "Paging":
+                options = pagingArray;
+                break;
+            case "Dictation":
+                options = dictationArray;
+                break;
+            case "Queries":
+                options = queriesArray;
+                break;
+            case "Rapid Response/Codes":
+                options = rrCodesArray;
+                break;
+            case "PCP’s":
+                options = pcpsArray;
+                break;
+            case "Case Managers":
+                options = caseManagersArray;
+                break;
             default:
                 options = reasons;
             
