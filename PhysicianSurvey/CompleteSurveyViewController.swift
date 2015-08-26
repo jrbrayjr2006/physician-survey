@@ -11,6 +11,10 @@ import UIKit
 class CompleteSurveyViewController: UIViewController {
     
     var survey : Survey = Survey.sharedFavoriteList;
+    
+    //var network : NetworkDelegate? // = NetworkDelegate();
+    
+    let sUrl : NSString = "http://54.88.113.204:8080/spring-survey-1.0.0-BUILD-SNAPSHOT/add";
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +30,10 @@ class CompleteSurveyViewController: UIViewController {
 
     @IBAction func completeSurveyOnTouchUp(sender: UIButton) {
         println("Survey Complete!");
+        let network = NetworkDelegate(serviceUrl: sUrl);
         
+        network.submitSurvey(survey);
+        println("Survey submitted");
         showMessage();
     }
     
