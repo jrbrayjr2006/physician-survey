@@ -33,7 +33,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwA-rx-RCs">
                                 <rect key="frame" x="16" y="406" width="568" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -70,6 +70,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-azure-lake.png" translatesAutoresizingMaskIntoConstraints="NO" id="yWy-08-dg5">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </imageView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xod-YB-6j1">
                                 <rect key="frame" x="0.0" y="114" width="600" height="162"/>
                                 <connections>
@@ -90,10 +93,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="yWy-08-dg5" firstAttribute="top" secondItem="WoU-ug-1WS" secondAttribute="bottom" id="6SO-3x-2cL"/>
                             <constraint firstItem="kyG-ZP-P69" firstAttribute="top" secondItem="0SR-Jf-2Yx" secondAttribute="bottom" constant="20" id="FZC-v3-c6A"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xod-YB-6j1" secondAttribute="trailing" constant="-16" id="Lex-VF-jmA"/>
+                            <constraint firstItem="yWy-08-dg5" firstAttribute="leading" secondItem="7Aw-9C-er4" secondAttribute="leadingMargin" constant="-16" id="PZ4-oz-eeW"/>
                             <constraint firstItem="0SR-Jf-2Yx" firstAttribute="leading" secondItem="7Aw-9C-er4" secondAttribute="leadingMargin" id="Sj0-hw-c70"/>
                             <constraint firstItem="0SR-Jf-2Yx" firstAttribute="trailing" secondItem="7Aw-9C-er4" secondAttribute="trailingMargin" id="TGX-sR-5m3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yWy-08-dg5" secondAttribute="trailing" constant="-16" id="YGu-WZ-Lvj"/>
+                            <constraint firstItem="kyG-ZP-P69" firstAttribute="top" secondItem="yWy-08-dg5" secondAttribute="bottom" id="aDk-Gs-cho"/>
                             <constraint firstItem="xod-YB-6j1" firstAttribute="leading" secondItem="7Aw-9C-er4" secondAttribute="leadingMargin" constant="-16" id="mN6-Bm-5ga"/>
                             <constraint firstItem="xod-YB-6j1" firstAttribute="top" secondItem="WoU-ug-1WS" secondAttribute="bottom" constant="50" id="pyb-ED-BNW"/>
                         </constraints>
@@ -124,7 +131,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7za-0K-8UE">
                                             <rect key="frame" x="8" y="11" width="481" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -166,7 +173,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eul-6L-p6M">
                                             <rect key="frame" x="8" y="11" width="483" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -341,6 +348,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="background-azure-lake.png" width="750" height="1334"/>
         <image name="sound_physicians_logo.png" width="240" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
