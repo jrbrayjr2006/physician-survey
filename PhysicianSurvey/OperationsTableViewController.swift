@@ -10,7 +10,7 @@ import UIKit
 
 class OperationsTableViewController: UITableViewController {
     
-    var hospitalOperationsArray : [String] = ["Nursing", "Consultants", "Operator", "Paging", "Dictation", "Queries", "Rapid Response/Codes", "PCP’s", "Case Managers"];
+    var hospitalOperationsArray : [String] = ["Nursing", "Consultants", "Operator", "Paging", "Dictation", "Queries", "Rapid Response/Codes", "PCPs", "Case Managers"];
     var soundOperationsArray : [String] = ["Leadership", "Sound Connect", "Fellow Hospitalists"];
     var survey :Survey = Survey.sharedFavoriteList;
     var selectedFeeling : String?;

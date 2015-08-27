@@ -17,7 +17,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.welcomeMessageLabel.numberOfLines = 0;
+        self.welcomeMessageLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping;
         self.welcomeMessageLabel.text = welcomeMessage;
+        
+        self.welcomeMessageLabel.sizeToFit();
     }
 
     override func didReceiveMemoryWarning() {

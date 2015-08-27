@@ -61,6 +61,10 @@ class NetworkDelegate: NSObject {
         // http://54.88.113.204:8080/spring-survey-1.0.0-BUILD-SNAPSHOT/add?rating=1&why_feeling=Hospital Operations&work_dissatisfaction=Nursing&answer_matrix=Dismissive&comments=test"
         NSLog("PostData: %@", postQueryParameters);
         
+        //postQueryParameters = postQueryParameters.stringByReplacingOccurrencesOfString("\'", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil);
+        //var newPostQueryParameters = postQueryParameters.stringByTrimmingCharactersInSet(NSCharacterSet.init(charactersInString: "'"));
+        NSLog("PostData: %@", postQueryParameters);
+        
         var postData:NSData = postQueryParameters.dataUsingEncoding(NSASCIIStringEncoding)!;
         var postLength: NSString = String(postData.length);
         
