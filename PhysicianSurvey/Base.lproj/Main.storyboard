@@ -211,7 +211,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-gothic.png" translatesAutoresizingMaskIntoConstraints="NO" id="Y0f-tn-27Z">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-med.png" translatesAutoresizingMaskIntoConstraints="NO" id="Y0f-tn-27Z">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWk-Zg-cEg">
@@ -363,8 +363,8 @@
     </scenes>
     <resources>
         <image name="background-azure-lake.png" width="750" height="1334"/>
-        <image name="background-gothic.png" width="750" height="1334"/>
         <image name="background-gradient.png" width="750" height="1334"/>
+        <image name="background-med.png" width="750" height="1334"/>
         <image name="background-stream.png" width="750" height="1334"/>
         <image name="sound_physicians_logo.png" width="240" height="128"/>
     </resources>
