@@ -152,7 +152,12 @@ class ReasonOperationViewController: UIViewController, UITableViewDelegate, UITa
         }
         
         let strReason : String = String(options![indexPath.row]) as String;
+        
+        
+        cell.textLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping;
+        cell.textLabel?.sizeToFit();
         cell.textLabel?.text = strReason;
+        cell.textLabel?.numberOfLines = 0;
         
         if(indexPath.section == 1) {
             cell.textLabel?.text = "Other";
@@ -166,6 +171,55 @@ class ReasonOperationViewController: UIViewController, UITableViewDelegate, UITa
         return cell;
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
+    {
+        switch(survey.operation!) {
+        case "Leadership":
+            options = leadershipArray;
+            break;
+        case "Sound Connect":
+            options = soundConnectArray;
+            break;
+        case "Fellow Hospitalists":
+            options = hospitalistsArray;
+            break;
+        case "Nursing":
+            options = nursingArray;
+            break;
+        case "Consultants":
+            options = consultantsArray;
+            break;
+        case "Operator":
+            options = operatorArray;
+            break;
+        case "Paging":
+            options = pagingArray;
+            break;
+        case "Dictation":
+            options = dictationArray;
+            break;
+        case "Queries":
+            options = queriesArray;
+            break;
+        case "Rapid Response/Codes":
+            options = rrCodesArray;
+            break;
+        case "PCPs":
+            options = pcpsArray;
+            break;
+        case "Case Managers":
+            options = caseManagersArray;
+            break;
+        default:
+            options = reasons;
+            
+        }
+        
+        let strReason : String = String(options![indexPath.row]) as String;
+        var height:CGFloat = self.calculateHeightForString(strReason)
+        return height + 70.0
+    }
+    
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
         println("Selected row at index: \(indexPath.row)");
     }
@@ -175,6 +229,7 @@ class ReasonOperationViewController: UIViewController, UITableViewDelegate, UITa
         
         if(commentTextField != nil) {
             survey.comments = commentTextField?.text;
+            survey.reason = commentTextField?.text;
             println(commentTextField?.text);
         }
         
@@ -195,5 +250,16 @@ class ReasonOperationViewController: UIViewController, UITableViewDelegate, UITa
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func calculateHeightForString(inString:String) -> CGFloat
+    {
+        var messageString = inString
+        var attributes = [UIFont(): UIFont.systemFontOfSize(15.0)]
+        var attrString:NSAttributedString? = NSAttributedString(string: messageString, attributes: attributes)
+        var rect:CGRect = attrString!.boundingRectWithSize(CGSizeMake(300.0,CGFloat.max), options: NSStringDrawingOptions.UsesLineFragmentOrigin, context:nil )//hear u will get nearer height not the exact value
+        var requredSize:CGRect = rect
+        return requredSize.height  //to include button's in your tableview
+        
+    }
 
 }

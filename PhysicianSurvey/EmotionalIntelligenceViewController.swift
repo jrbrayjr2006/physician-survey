@@ -41,8 +41,16 @@ class EmotionalIntelligenceViewController: UIViewController {
         strFeeling = String(feelings[row]) as String;
         var selectedValue : Int = feelings[row];
         
-        survey.score = selectedValue;
+        //survey.score = selectedValue;
         return strFeeling;
+    }
+    
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        strFeeling = String(feelings[row]) as String;
+        var selectedValue : Int = feelings[row];
+        
+        survey.score = selectedValue;
     }
     
 

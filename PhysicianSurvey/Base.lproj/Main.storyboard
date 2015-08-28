@@ -122,6 +122,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <imageView key="tableFooterView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-stream.png" id="EeK-ww-aQc">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="475"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="whyFeelingTableViewCell" id="yNT-a7-21Y" customClass="WhyFeelingTableViewCell" customModule="PhysicianSurvey" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -349,6 +353,7 @@
     </scenes>
     <resources>
         <image name="background-azure-lake.png" width="750" height="1334"/>
+        <image name="background-stream.png" width="750" height="1334"/>
         <image name="sound_physicians_logo.png" width="240" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
