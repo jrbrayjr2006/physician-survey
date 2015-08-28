@@ -68,11 +68,11 @@ class OperationsTableViewController: UITableViewController {
         // Configure the cell...
         if selectedFeeling == "Hospital Operations"  {
             operations = String(hospitalOperationsArray[indexPath.row]) as String;
-            println(operations!);
+            //println(operations!);
         }
         else {
             operations = String(soundOperationsArray[indexPath.row]) as String;
-            println(operations!);
+            //println(operations!);
         }
         
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator;

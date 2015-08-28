@@ -87,7 +87,7 @@
                                 </state>
                                 <connections>
                                     <action selector="provideDetailsOnTouchUp:" destination="YRo-tT-mmS" eventType="touchUpInside" id="Mbz-CZ-YKH"/>
-                                    <segue destination="sLZ-J6-2HQ" kind="show" id="xmj-Ro-Vpm"/>
+                                    <segue destination="gQc-X2-6r2" kind="show" id="Rlp-SN-O6e"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -113,52 +113,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l6q-Ym-EAh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2610" y="324"/>
-        </scene>
-        <!--Why Do You Feel This Way-->
-        <scene sceneID="2df-9I-RgZ">
-            <objects>
-                <tableViewController id="sLZ-J6-2HQ" customClass="WhyFeelingViewController" customModule="PhysicianSurvey" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Awh-sp-iXd">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <imageView key="tableFooterView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-stream.png" id="EeK-ww-aQc">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="475"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="whyFeelingTableViewCell" id="yNT-a7-21Y" customClass="WhyFeelingTableViewCell" customModule="PhysicianSurvey" customModuleProvider="target">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yNT-a7-21Y" id="Hxp-Wg-grq">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7za-0K-8UE">
-                                            <rect key="frame" x="8" y="11" width="481" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="whyFeelingLabel" destination="7za-0K-8UE" id="Sz3-hb-qaT"/>
-                                    <segue destination="QZf-S3-yM2" kind="show" id="MHj-Xk-HeH"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="sLZ-J6-2HQ" id="c4R-s3-FqV"/>
-                            <outlet property="delegate" destination="sLZ-J6-2HQ" id="No5-fs-rio"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Why Do You Feel This Way" id="GHe-Ch-Sl1"/>
-                    <connections>
-                        <outlet property="whyFeelingTableView" destination="Awh-sp-iXd" id="jwu-p4-boq"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fMC-I6-23J" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4095" y="338"/>
         </scene>
         <!--Operations Table View Controller-->
         <scene sceneID="pBh-yJ-2jF">
@@ -200,7 +154,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ScX-OZ-JdR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5628" y="338"/>
+            <point key="canvasLocation" x="4802" y="324"/>
         </scene>
         <!--Reason Operation View Controller-->
         <scene sceneID="y8r-wf-rnp">
@@ -243,7 +197,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KDf-NQ-Kua" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6327" y="338"/>
+            <point key="canvasLocation" x="5574" y="324"/>
         </scene>
         <!--Complete Survey View Controller-->
         <scene sceneID="eTW-N8-etb">
@@ -257,6 +211,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-gothic.png" translatesAutoresizingMaskIntoConstraints="NO" id="Y0f-tn-27Z">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWk-Zg-cEg">
                                 <rect key="frame" x="16" y="285" width="568" height="30"/>
                                 <state key="normal" title="Confirm Survey Complete">
@@ -269,14 +226,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Y0f-tn-27Z" secondAttribute="trailing" constant="-16" id="1Dk-hb-GPA"/>
                             <constraint firstItem="MWk-Zg-cEg" firstAttribute="trailing" secondItem="zWR-fT-cCo" secondAttribute="trailingMargin" id="C6s-RM-1f3"/>
+                            <constraint firstItem="Y0f-tn-27Z" firstAttribute="leading" secondItem="zWR-fT-cCo" secondAttribute="leadingMargin" constant="-16" id="EKm-zK-FjY"/>
                             <constraint firstItem="MWk-Zg-cEg" firstAttribute="leading" secondItem="zWR-fT-cCo" secondAttribute="leadingMargin" id="FaI-tp-6WP"/>
+                            <constraint firstItem="N8v-CJ-kVp" firstAttribute="top" secondItem="Y0f-tn-27Z" secondAttribute="bottom" id="omw-PP-abJ"/>
+                            <constraint firstItem="Y0f-tn-27Z" firstAttribute="top" secondItem="sHv-wz-upE" secondAttribute="bottom" id="oye-8Z-fwD"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9lf-4M-vkS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7005" y="338"/>
+            <point key="canvasLocation" x="6316" y="324"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ntm-wf-PCo">
@@ -314,23 +275,72 @@
             </objects>
             <point key="canvasLocation" x="1798" y="324"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="X3L-Yl-PPf">
+        <!--Why Feeling View Controller-->
+        <scene sceneID="tDG-xg-rwb">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wKK-iP-ZeR" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="C2h-bP-I26">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="sLZ-J6-2HQ" kind="relationship" relationship="rootViewController" id="Xqw-Jk-n1O"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SpT-Zs-mLJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="gQc-X2-6r2" customClass="WhyFeelingViewController" customModule="PhysicianSurvey" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y4z-9t-1qJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="LYr-gW-hr7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SwS-Hk-YJ9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-stream.png" translatesAutoresizingMaskIntoConstraints="NO" id="mbf-GV-30C">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTX-Nj-1t3">
+                                <rect key="frame" x="16" y="84" width="568" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="mxz-sR-3NA"/>
+                                </constraints>
+                                <state key="normal" title="Hospital Operations" backgroundImage="background-gradient.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="hospitalOperationOnTouchUp:" destination="gQc-X2-6r2" eventType="touchUpInside" id="tqf-d8-aux"/>
+                                    <segue destination="QZf-S3-yM2" kind="show" id="0rI-JC-P7e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssT-lI-76F">
+                                <rect key="frame" x="16" y="264" width="568" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="chR-ev-Wqh"/>
+                                </constraints>
+                                <state key="normal" title="Sound Operations" backgroundImage="background-gradient.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="soundOperationOnTouchUp:" destination="gQc-X2-6r2" eventType="touchUpInside" id="1pK-FL-YQX"/>
+                                    <segue destination="QZf-S3-yM2" kind="show" id="8wD-53-wUc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZTX-Nj-1t3" firstAttribute="leading" secondItem="SwS-Hk-YJ9" secondAttribute="leadingMargin" id="2Sg-gP-Qfq"/>
+                            <constraint firstItem="ssT-lI-76F" firstAttribute="trailing" secondItem="SwS-Hk-YJ9" secondAttribute="trailingMargin" id="56p-fY-bke"/>
+                            <constraint firstItem="mbf-GV-30C" firstAttribute="leading" secondItem="SwS-Hk-YJ9" secondAttribute="leadingMargin" constant="-16" id="CMP-qP-5k1"/>
+                            <constraint firstItem="ssT-lI-76F" firstAttribute="top" secondItem="y4z-9t-1qJ" secondAttribute="bottom" constant="200" id="DpB-hs-3Xz"/>
+                            <constraint firstItem="ssT-lI-76F" firstAttribute="top" secondItem="ZTX-Nj-1t3" secondAttribute="bottom" constant="80" id="E7e-Z1-6gM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mbf-GV-30C" secondAttribute="trailing" constant="-16" id="Ews-eO-IKY"/>
+                            <constraint firstItem="ZTX-Nj-1t3" firstAttribute="leading" secondItem="SwS-Hk-YJ9" secondAttribute="leadingMargin" id="GCc-PI-ysl"/>
+                            <constraint firstItem="ssT-lI-76F" firstAttribute="leading" secondItem="SwS-Hk-YJ9" secondAttribute="leadingMargin" id="LbV-x2-n93"/>
+                            <constraint firstItem="ZTX-Nj-1t3" firstAttribute="top" secondItem="y4z-9t-1qJ" secondAttribute="bottom" constant="20" id="O23-ch-5kC"/>
+                            <constraint firstItem="mbf-GV-30C" firstAttribute="top" secondItem="y4z-9t-1qJ" secondAttribute="bottom" id="TjE-ab-odp"/>
+                            <constraint firstItem="ZTX-Nj-1t3" firstAttribute="top" secondItem="y4z-9t-1qJ" secondAttribute="bottom" constant="20" id="iz7-hc-Uj3"/>
+                            <constraint firstItem="LYr-gW-hr7" firstAttribute="top" secondItem="mbf-GV-30C" secondAttribute="bottom" id="nfq-tR-67N"/>
+                            <constraint firstItem="ZTX-Nj-1t3" firstAttribute="trailing" secondItem="SwS-Hk-YJ9" secondAttribute="trailingMargin" id="tBf-DT-Vba"/>
+                            <constraint firstItem="ssT-lI-76F" firstAttribute="leading" secondItem="SwS-Hk-YJ9" secondAttribute="leadingMargin" id="uVB-wb-lRb"/>
+                            <constraint firstItem="ZTX-Nj-1t3" firstAttribute="trailing" secondItem="SwS-Hk-YJ9" secondAttribute="trailingMargin" id="zMo-Nq-26B"/>
+                            <constraint firstItem="ssT-lI-76F" firstAttribute="trailing" secondItem="SwS-Hk-YJ9" secondAttribute="trailingMargin" id="ziY-H3-zAa"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Gc-Kg-al8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3283" y="338"/>
+            <point key="canvasLocation" x="3325" y="324"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Yem-8m-CZJ">
@@ -348,15 +358,17 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbn-fC-W7X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4816" y="338"/>
+            <point key="canvasLocation" x="4031" y="324"/>
         </scene>
     </scenes>
     <resources>
         <image name="background-azure-lake.png" width="750" height="1334"/>
+        <image name="background-gothic.png" width="750" height="1334"/>
+        <image name="background-gradient.png" width="750" height="1334"/>
         <image name="background-stream.png" width="750" height="1334"/>
         <image name="sound_physicians_logo.png" width="240" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xmj-Ro-Vpm"/>
+        <segue reference="8wD-53-wUc"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -34,6 +34,11 @@ class CompleteSurveyViewController: UIViewController {
         
         network.submitSurvey(survey);
         println("Survey submitted");
+        println("Score: \(survey.score!)");
+        println("Why Feeling: \(survey.whyFeeling!)");
+        println("Operation: \(survey.operation!)");
+        println("Reason: \(survey.reason!)");
+        println("Comments: \(survey.comments!)");
         showMessage();
     }
     
