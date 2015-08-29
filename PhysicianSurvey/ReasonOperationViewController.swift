@@ -31,7 +31,11 @@ class ReasonOperationViewController: UIViewController, UITableViewDelegate, UITa
     
     var reason : String?;
     
-    var commentTextField : UITextField?
+    var commentTextField : UITextField?;
+    
+    var nextLabel : UILabel?;
+    
+    let instructionsText : String = "In order to keep your response anonymous, please keep subjects down to 1-6 words.";
     
     @IBOutlet weak var reasonOperationTableView: UITableView!
 
@@ -41,6 +45,7 @@ class ReasonOperationViewController: UIViewController, UITableViewDelegate, UITa
         // Do any additional setup after loading the view.
         self.reasonOperationTableView.registerClass(ReasonOperationTableViewCell.self, forCellReuseIdentifier: "reasonOperationTableViewCell");
         self.title = survey.operation;
+        showMessage();
     }
 
     override func didReceiveMemoryWarning() {
@@ -154,10 +159,10 @@ class ReasonOperationViewController: UIViewController, UITableViewDelegate, UITa
         let strReason : String = String(options![indexPath.row]) as String;
         
         
-        cell.textLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping;
-        cell.textLabel?.sizeToFit();
+        //cell.textLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping;
+        //cell.textLabel?.sizeToFit();
         cell.textLabel?.text = strReason;
-        cell.textLabel?.numberOfLines = 0;
+        //cell.textLabel?.numberOfLines = 0;
         
         if(indexPath.section == 1) {
             cell.textLabel?.text = "Other";
@@ -165,7 +170,13 @@ class ReasonOperationViewController: UIViewController, UITableViewDelegate, UITa
             commentTextField!.placeholder = "Enter Other Reason";
             commentTextField!.borderStyle = UITextBorderStyle.Line;
             
+            commentTextField?.touchInside
             cell.addSubview(commentTextField!);
+            
+            nextLabel = UILabel(frame: CGRect(x: 310, y: 10, width: 20.00, height: 30.00));
+            nextLabel?.text = ">";
+            
+            cell.addSubview(nextLabel!);
         }
         
         return cell;
@@ -221,35 +232,25 @@ class ReasonOperationViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        
         println("Selected row at index: \(indexPath.row)");
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         println("Selected row at index: \(indexPath.row)");
+        reason = String(options![indexPath.row]) as String;
+        survey.comments = "";  // prevents error because value is nil;
+        survey.reason = reason!;
         
-        if(commentTextField != nil) {
+        if((commentTextField != nil) && (commentTextField?.text != "")) {
             survey.comments = commentTextField?.text;
             survey.reason = commentTextField?.text;
             println(commentTextField?.text);
         }
         
-        reason = String(options![indexPath.row]) as String;
-        
-        survey.reason = reason!;
-        println("The reason is " + reason!);
+        println("The reason is " + survey.reason!);
         self.performSegueWithIdentifier("reasonOperationToCompleteSegue", sender: self);
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     func calculateHeightForString(inString:String) -> CGFloat
     {
@@ -260,6 +261,16 @@ class ReasonOperationViewController: UIViewController, UITableViewDelegate, UITa
         var requredSize:CGRect = rect
         return requredSize.height  //to include button's in your tableview
         
+    }
+    
+    private func showMessage() -> Void {
+        var alertView:UIAlertView = UIAlertView();
+        alertView.title = "Instructions"
+        alertView.message = "If you enter text in the Other option, in order to keep your response anonymous, please keep subjects down to 1-6 words."
+        alertView.delegate = self
+        alertView.addButtonWithTitle("OK")
+        alertView.show()
+        return;
     }
 
 }

@@ -36,14 +36,21 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-metal.png" translatesAutoresizingMaskIntoConstraints="NO" id="Uc0-7x-7AK">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Y83-b3-Wzj" secondAttribute="centerX" id="06q-4U-bDn"/>
+                            <constraint firstItem="Uc0-7x-7AK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6qp-3u-sAd"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="txE-qE-T96" secondAttribute="bottom" constant="20" id="N8R-YC-ggs"/>
+                            <constraint firstItem="Uc0-7x-7AK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="Rfa-g5-VhO"/>
                             <constraint firstItem="rwA-rx-RCs" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="XIM-H1-hRP"/>
                             <constraint firstItem="rwA-rx-RCs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Yte-mf-Nzf"/>
                             <constraint firstAttribute="centerX" secondItem="txE-qE-T96" secondAttribute="centerX" id="aaE-I4-xkq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Uc0-7x-7AK" secondAttribute="bottom" id="by7-r9-XBF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Uc0-7x-7AK" secondAttribute="trailing" constant="-16" id="cnl-gO-1ZQ"/>
                             <constraint firstAttribute="centerX" secondItem="txE-qE-T96" secondAttribute="centerX" id="tGJ-l4-jIT"/>
                             <constraint firstItem="Y83-b3-Wzj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="tae-25-btZ"/>
                             <constraint firstItem="rwA-rx-RCs" firstAttribute="top" secondItem="Y83-b3-Wzj" secondAttribute="bottom" constant="194" id="uO6-9l-A2i"/>
@@ -365,6 +372,7 @@
         <image name="background-azure-lake.png" width="750" height="1334"/>
         <image name="background-gradient.png" width="750" height="1334"/>
         <image name="background-med.png" width="750" height="1334"/>
+        <image name="background-metal.png" width="750" height="1334"/>
         <image name="background-stream.png" width="750" height="1334"/>
         <image name="sound_physicians_logo.png" width="240" height="128"/>
     </resources>

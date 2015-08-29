@@ -22,6 +22,7 @@
 		B755A30F1B86D9D900FA01E4 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B755A30E1B86D9D900FA01E4 /* Survey.swift */; };
 		B770584C1B90114A00250601 /* background-ekg.png in Resources */ = {isa = PBXBuildFile; fileRef = B770584B1B90114A00250601 /* background-ekg.png */; };
 		B770584E1B9012B500250601 /* background-med.png in Resources */ = {isa = PBXBuildFile; fileRef = B770584D1B9012B500250601 /* background-med.png */; };
+		B77058501B9013E300250601 /* background-metal.png in Resources */ = {isa = PBXBuildFile; fileRef = B770584F1B9013E300250601 /* background-metal.png */; };
 		B7722C781B8A986A00A858E5 /* ReasonOperationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7722C771B8A986A00A858E5 /* ReasonOperationTableViewCell.swift */; };
 		B7722C7A1B8A9A2900A858E5 /* CompleteSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7722C791B8A9A2900A858E5 /* CompleteSurveyViewController.swift */; };
 		B773FCBC1B8A4D1600066EF1 /* NetworkDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B773FCBB1B8A4D1600066EF1 /* NetworkDelegate.swift */; };
@@ -62,6 +63,7 @@
 		B755A30E1B86D9D900FA01E4 /* Survey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
 		B770584B1B90114A00250601 /* background-ekg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-ekg.png"; sourceTree = "<group>"; };
 		B770584D1B9012B500250601 /* background-med.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-med.png"; sourceTree = "<group>"; };
+		B770584F1B9013E300250601 /* background-metal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-metal.png"; sourceTree = "<group>"; };
 		B7722C771B8A986A00A858E5 /* ReasonOperationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReasonOperationTableViewCell.swift; sourceTree = "<group>"; };
 		B7722C791B8A9A2900A858E5 /* CompleteSurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompleteSurveyViewController.swift; sourceTree = "<group>"; };
 		B773FCBB1B8A4D1600066EF1 /* NetworkDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			children = (
 				B7F1791E1B8D7CD900F4BEB2 /* background-azure-lake.png */,
 				B770584B1B90114A00250601 /* background-ekg.png */,
+				B770584F1B9013E300250601 /* background-metal.png */,
 				B770584D1B9012B500250601 /* background-med.png */,
 				B77A28991B8EAFA4000C1C1B /* background-gradient.png */,
 				B77A28971B8EAF9A000C1C1B /* background-stream.png */,
@@ -252,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7061E871B6F12BB004295C6 /* Main.storyboard in Resources */,
+				B77058501B9013E300250601 /* background-metal.png in Resources */,
 				B7061E8C1B6F12BB004295C6 /* LaunchScreen.xib in Resources */,
 				B7F1791D1B8D771F00F4BEB2 /* background-gothic.png in Resources */,
 				B77A28981B8EAF9A000C1C1B /* background-stream.png in Resources */,
