@@ -35,6 +35,8 @@ class ReasonOperationViewController: UIViewController, UITableViewDelegate, UITa
     
     var nextLabel : UILabel?;
     
+    var nextButton : UIButton?;
+    
     let instructionsText : String = "In order to keep your response anonymous, please keep subjects down to 1-6 words.";
     
     @IBOutlet weak var reasonOperationTableView: UITableView!
@@ -177,6 +179,14 @@ class ReasonOperationViewController: UIViewController, UITableViewDelegate, UITa
             nextLabel?.text = ">";
             
             cell.addSubview(nextLabel!);
+        } else {
+            nextButton = UIButton(frame: CGRect(x: 310, y: 10, width: 50, height: 25));
+            nextButton?.setTitle("Next", forState: UIControlState.Normal);
+            nextButton?.titleLabel?.backgroundColor = UIColor.blackColor();
+            nextButton?.backgroundColor = UIColor.grayColor();
+            nextButton?.alpha = 0.5;
+            nextButton?.addTarget(self, action: "nextButtonOnTouchUp:", forControlEvents: UIControlEvents.TouchUpInside)
+            cell.addSubview(nextButton!);
         }
         
         return cell;
@@ -271,6 +281,10 @@ class ReasonOperationViewController: UIViewController, UITableViewDelegate, UITa
         alertView.addButtonWithTitle("OK")
         alertView.show()
         return;
+    }
+    
+    func nextButtonOnTouchUp(sender : UIButton!) {
+        println("Button touched!");
     }
 
 }
