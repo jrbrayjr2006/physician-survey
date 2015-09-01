@@ -107,7 +107,8 @@ class NetworkDelegate: NSObject {
             
             
         } else {
-
+            NSLog("Bad response");
+            responseData = NSString(UTF8String: "FAILURE");
                 var alertView:UIAlertView = UIAlertView()
                 alertView.title = "FAILURE"
                 alertView.message = "Survey submission failed!";

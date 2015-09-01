@@ -185,7 +185,7 @@ class ReasonOperationViewController: UIViewController, UITableViewDelegate, UITa
             nextButton?.titleLabel?.backgroundColor = UIColor.blackColor();
             nextButton?.backgroundColor = UIColor.grayColor();
             nextButton?.alpha = 0.5;
-            nextButton?.addTarget(self, action: "nextButtonOnTouchUp:", forControlEvents: UIControlEvents.TouchUpInside)
+            nextButton?.addTarget(self, action: "nextButtonOnTouchUp:", forControlEvents: UIControlEvents.TouchUpInside);
             cell.addSubview(nextButton!);
         }
         
@@ -283,8 +283,27 @@ class ReasonOperationViewController: UIViewController, UITableViewDelegate, UITa
         return;
     }
     
+    // get the super view of the sender to get the index of the cell
     func nextButtonOnTouchUp(sender : UIButton!) {
         println("Button touched!");
+        
+        var clickedCell : UITableViewCell = sender.superview as! UITableViewCell;
+        var indexPath : NSIndexPath! = self.reasonOperationTableView.indexPathForCell(clickedCell);
+        
+        println("Selected row at index: \(indexPath.row)");
+        reason = String(options![indexPath.row]) as String;
+        survey.comments = "";  // prevents error because value is nil;
+        survey.reason = reason!;
+        
+        if((commentTextField != nil) && (commentTextField?.text != "")) {
+            survey.comments = commentTextField?.text;
+            survey.reason = commentTextField?.text;
+            println(commentTextField?.text);
+        }
+        
+        println("The reason is " + survey.reason!);
+        
+        self.performSegueWithIdentifier("reasonOperationToCompleteSegue", sender: self);
     }
 
 }
