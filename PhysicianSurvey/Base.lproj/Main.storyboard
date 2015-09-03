@@ -23,6 +23,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txE-qE-T96">
                                 <rect key="frame" x="254" y="550" width="92" height="30"/>
                                 <state key="normal" title="Go To Survey">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -33,24 +34,17 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwA-rx-RCs">
                                 <rect key="frame" x="16" y="406" width="568" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-metal.png" translatesAutoresizingMaskIntoConstraints="NO" id="Uc0-7x-7AK">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Y83-b3-Wzj" secondAttribute="centerX" id="06q-4U-bDn"/>
-                            <constraint firstItem="Uc0-7x-7AK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6qp-3u-sAd"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="txE-qE-T96" secondAttribute="bottom" constant="20" id="N8R-YC-ggs"/>
-                            <constraint firstItem="Uc0-7x-7AK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="Rfa-g5-VhO"/>
                             <constraint firstItem="rwA-rx-RCs" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="XIM-H1-hRP"/>
                             <constraint firstItem="rwA-rx-RCs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Yte-mf-Nzf"/>
                             <constraint firstAttribute="centerX" secondItem="txE-qE-T96" secondAttribute="centerX" id="aaE-I4-xkq"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Uc0-7x-7AK" secondAttribute="bottom" id="by7-r9-XBF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Uc0-7x-7AK" secondAttribute="trailing" constant="-16" id="cnl-gO-1ZQ"/>
                             <constraint firstAttribute="centerX" secondItem="txE-qE-T96" secondAttribute="centerX" id="tGJ-l4-jIT"/>
                             <constraint firstItem="Y83-b3-Wzj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="tae-25-btZ"/>
                             <constraint firstItem="rwA-rx-RCs" firstAttribute="top" secondItem="Y83-b3-Wzj" secondAttribute="bottom" constant="194" id="uO6-9l-A2i"/>
@@ -77,11 +71,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-azure-lake.png" translatesAutoresizingMaskIntoConstraints="NO" id="yWy-08-dg5">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                            </imageView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xod-YB-6j1">
                                 <rect key="frame" x="0.0" y="114" width="600" height="162"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="YRo-tT-mmS" id="Aif-F8-J52"/>
                                     <outlet property="delegate" destination="YRo-tT-mmS" id="X5D-4P-AgQ"/>
@@ -90,6 +82,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0SR-Jf-2Yx">
                                 <rect key="frame" x="16" y="550" width="568" height="30"/>
                                 <state key="normal" title="Provide Details">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -98,16 +91,12 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="yWy-08-dg5" firstAttribute="top" secondItem="WoU-ug-1WS" secondAttribute="bottom" id="6SO-3x-2cL"/>
                             <constraint firstItem="kyG-ZP-P69" firstAttribute="top" secondItem="0SR-Jf-2Yx" secondAttribute="bottom" constant="20" id="FZC-v3-c6A"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xod-YB-6j1" secondAttribute="trailing" constant="-16" id="Lex-VF-jmA"/>
-                            <constraint firstItem="yWy-08-dg5" firstAttribute="leading" secondItem="7Aw-9C-er4" secondAttribute="leadingMargin" constant="-16" id="PZ4-oz-eeW"/>
                             <constraint firstItem="0SR-Jf-2Yx" firstAttribute="leading" secondItem="7Aw-9C-er4" secondAttribute="leadingMargin" id="Sj0-hw-c70"/>
                             <constraint firstItem="0SR-Jf-2Yx" firstAttribute="trailing" secondItem="7Aw-9C-er4" secondAttribute="trailingMargin" id="TGX-sR-5m3"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="yWy-08-dg5" secondAttribute="trailing" constant="-16" id="YGu-WZ-Lvj"/>
-                            <constraint firstItem="kyG-ZP-P69" firstAttribute="top" secondItem="yWy-08-dg5" secondAttribute="bottom" id="aDk-Gs-cho"/>
                             <constraint firstItem="xod-YB-6j1" firstAttribute="leading" secondItem="7Aw-9C-er4" secondAttribute="leadingMargin" constant="-16" id="mN6-Bm-5ga"/>
                             <constraint firstItem="xod-YB-6j1" firstAttribute="top" secondItem="WoU-ug-1WS" secondAttribute="bottom" constant="50" id="pyb-ED-BNW"/>
                         </constraints>
@@ -218,12 +207,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-med.png" translatesAutoresizingMaskIntoConstraints="NO" id="Y0f-tn-27Z">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWk-Zg-cEg">
                                 <rect key="frame" x="16" y="285" width="568" height="30"/>
                                 <state key="normal" title="Confirm Survey Complete">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -231,14 +218,10 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Y0f-tn-27Z" secondAttribute="trailing" constant="-16" id="1Dk-hb-GPA"/>
                             <constraint firstItem="MWk-Zg-cEg" firstAttribute="trailing" secondItem="zWR-fT-cCo" secondAttribute="trailingMargin" id="C6s-RM-1f3"/>
-                            <constraint firstItem="Y0f-tn-27Z" firstAttribute="leading" secondItem="zWR-fT-cCo" secondAttribute="leadingMargin" constant="-16" id="EKm-zK-FjY"/>
                             <constraint firstItem="MWk-Zg-cEg" firstAttribute="leading" secondItem="zWR-fT-cCo" secondAttribute="leadingMargin" id="FaI-tp-6WP"/>
-                            <constraint firstItem="N8v-CJ-kVp" firstAttribute="top" secondItem="Y0f-tn-27Z" secondAttribute="bottom" id="omw-PP-abJ"/>
-                            <constraint firstItem="Y0f-tn-27Z" firstAttribute="top" secondItem="sHv-wz-upE" secondAttribute="bottom" id="oye-8Z-fwD"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -294,9 +277,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-stream.png" translatesAutoresizingMaskIntoConstraints="NO" id="mbf-GV-30C">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTX-Nj-1t3">
                                 <rect key="frame" x="16" y="84" width="568" height="100"/>
                                 <constraints>
@@ -324,20 +304,16 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ZTX-Nj-1t3" firstAttribute="leading" secondItem="SwS-Hk-YJ9" secondAttribute="leadingMargin" id="2Sg-gP-Qfq"/>
                             <constraint firstItem="ssT-lI-76F" firstAttribute="trailing" secondItem="SwS-Hk-YJ9" secondAttribute="trailingMargin" id="56p-fY-bke"/>
-                            <constraint firstItem="mbf-GV-30C" firstAttribute="leading" secondItem="SwS-Hk-YJ9" secondAttribute="leadingMargin" constant="-16" id="CMP-qP-5k1"/>
                             <constraint firstItem="ssT-lI-76F" firstAttribute="top" secondItem="y4z-9t-1qJ" secondAttribute="bottom" constant="200" id="DpB-hs-3Xz"/>
                             <constraint firstItem="ssT-lI-76F" firstAttribute="top" secondItem="ZTX-Nj-1t3" secondAttribute="bottom" constant="80" id="E7e-Z1-6gM"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="mbf-GV-30C" secondAttribute="trailing" constant="-16" id="Ews-eO-IKY"/>
                             <constraint firstItem="ZTX-Nj-1t3" firstAttribute="leading" secondItem="SwS-Hk-YJ9" secondAttribute="leadingMargin" id="GCc-PI-ysl"/>
                             <constraint firstItem="ssT-lI-76F" firstAttribute="leading" secondItem="SwS-Hk-YJ9" secondAttribute="leadingMargin" id="LbV-x2-n93"/>
                             <constraint firstItem="ZTX-Nj-1t3" firstAttribute="top" secondItem="y4z-9t-1qJ" secondAttribute="bottom" constant="20" id="O23-ch-5kC"/>
-                            <constraint firstItem="mbf-GV-30C" firstAttribute="top" secondItem="y4z-9t-1qJ" secondAttribute="bottom" id="TjE-ab-odp"/>
                             <constraint firstItem="ZTX-Nj-1t3" firstAttribute="top" secondItem="y4z-9t-1qJ" secondAttribute="bottom" constant="20" id="iz7-hc-Uj3"/>
-                            <constraint firstItem="LYr-gW-hr7" firstAttribute="top" secondItem="mbf-GV-30C" secondAttribute="bottom" id="nfq-tR-67N"/>
                             <constraint firstItem="ZTX-Nj-1t3" firstAttribute="trailing" secondItem="SwS-Hk-YJ9" secondAttribute="trailingMargin" id="tBf-DT-Vba"/>
                             <constraint firstItem="ssT-lI-76F" firstAttribute="leading" secondItem="SwS-Hk-YJ9" secondAttribute="leadingMargin" id="uVB-wb-lRb"/>
                             <constraint firstItem="ZTX-Nj-1t3" firstAttribute="trailing" secondItem="SwS-Hk-YJ9" secondAttribute="trailingMargin" id="zMo-Nq-26B"/>
@@ -369,11 +345,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background-azure-lake.png" width="750" height="1334"/>
         <image name="background-gradient.png" width="750" height="1334"/>
-        <image name="background-med.png" width="750" height="1334"/>
-        <image name="background-metal.png" width="750" height="1334"/>
-        <image name="background-stream.png" width="750" height="1334"/>
         <image name="sound_physicians_logo.png" width="240" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
