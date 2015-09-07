@@ -16,6 +16,7 @@ class Survey: NSObject {
     var operation : String?;
     var reason : String?;
     var comments : String?;
+    var orgKey : String?;
     
     class var sharedFavoriteList : Survey {
         struct Singleton {
