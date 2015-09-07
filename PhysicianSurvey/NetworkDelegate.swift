@@ -45,13 +45,19 @@ class NetworkDelegate: NSObject {
     
     func submitSurvey(survey : Survey) -> String {
         //var tmpUrl: String = "\(self.serviceUrl)?username=\(username)&password=\(password)";
+        
+        if(survey.orgKey == nil) {
+            invalidKeyMessage();
+            return "611";
+        }
         var rating : Int = survey.score!;
         var why_feeling : String = survey.whyFeeling!;
         var work_dissatisfaction : String = survey.operation!;
         var answer_matrix : String = survey.reason!;
         var comments : String = survey.comments!;
+        var orgKey : String = survey.orgKey!;
         //add?rating=5&why_feeling=lousy&work_dissatisfaction=survey&answer_matrix=1,2,3&comments=These-comments
-        var postQueryParameters : NSString = "rating=\(rating)&why_feeling=\(why_feeling)&work_dissatisfaction=\(work_dissatisfaction)&answer_matrix=\(answer_matrix)&comments=\(comments)";
+        var postQueryParameters : NSString = "rating=\(rating)&why_feeling=\(why_feeling)&work_dissatisfaction=\(work_dissatisfaction)&answer_matrix=\(answer_matrix)&comments=\(comments)&orgKey=\(orgKey)";
         //var post :NSString = "username=\(username)&password=\(password)";
         var newUrlString = String(self.serviceUrl!);
         NSLog("This is the url:  %@", newUrlString);
@@ -119,6 +125,16 @@ class NetworkDelegate: NSObject {
         }
         
         return String(responseData!);  //TODO
+    }
+    
+    private func invalidKeyMessage() -> Void {
+        var alertView:UIAlertView = UIAlertView();
+        alertView.title = "Invalid Organization Key"
+        alertView.message = "You must have a key to use this survey app.  Go to Settings and select the Physician Survey app.  Enter your organization key in the Organization field."
+        alertView.delegate = self
+        alertView.addButtonWithTitle("OK")
+        alertView.show()
+        return;
     }
    
 }
