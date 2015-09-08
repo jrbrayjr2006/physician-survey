@@ -35,6 +35,8 @@ class ReasonOperationViewController: UIViewController, UITableViewDelegate, UITa
     
     var nextLabel : UILabel?;
     
+    var testLabel : UILabel?;
+    
     var nextButton : UIButton?;
     
     let instructionsText : String = "In order to keep your response anonymous, please keep subjects down to 1-6 words.";
@@ -160,11 +162,19 @@ class ReasonOperationViewController: UIViewController, UITableViewDelegate, UITa
         
         let strReason : String = String(options![indexPath.row]) as String;
         
+        //cell.reasonLabel?.text = "sample";
+        //cell.reasonLabel?.text = strReason;
+        //cell.reasonLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping;
+        //cell.reasonLabel?.sizeToFit();
         
-        //cell.textLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping;
-        //cell.textLabel?.sizeToFit();
-        cell.textLabel?.text = strReason;
-        //cell.textLabel?.numberOfLines = 0;
+        if(indexPath.section == 0) {
+            testLabel = UILabel(frame: CGRect(x: 10, y: 10, width: 280.00, height: 60.00));
+            testLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping;
+            testLabel?.text = strReason;
+            //testLabel?.sizeToFit();
+            testLabel?.numberOfLines = 0;
+            cell.addSubview(testLabel!);
+        }
         
         if(indexPath.section == 1) {
             cell.textLabel?.text = "Other";

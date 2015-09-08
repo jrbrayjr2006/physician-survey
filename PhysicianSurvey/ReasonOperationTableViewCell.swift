@@ -9,6 +9,8 @@
 import UIKit
 
 class ReasonOperationTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var reasonLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
