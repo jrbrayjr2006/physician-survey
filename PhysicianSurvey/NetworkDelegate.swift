@@ -11,36 +11,12 @@ import Foundation
 
 class NetworkDelegate: NSObject {
     
-    let serviceUrl : String?  // = "http://54.88.113.204:8080";
+    let serviceUrl : String?  // = "http://54.88.113.204:8080" "http://docsurvey.com:8080";
     let urlContext : String = "/spring-survey-1.0.0-BUILD-SNAPSHOT/add";
     
     init(serviceUrl : NSString) {
         self.serviceUrl = serviceUrl as String;
     }
-    
-    /*
-    func submitSurvey2(survey : Survey) {
-        var postQueryParameters : NSString = "TBD";
-        var surveyUrlString : String = String(self.serviceUrl) + String(self.urlContext) + "?" + String(postQueryParameters);
-        
-        var url: NSURL = NSURL(string: surveyUrlString)!;
-        
-        var postData:NSData = postQueryParameters.dataUsingEncoding(NSASCIIStringEncoding)!;
-        var postLength: NSString = String(postData.length);
-        
-        // build the request
-        var request: NSMutableURLRequest = NSMutableURLRequest(URL: url);
-        request.HTTPMethod = "POST";
-        request.HTTPBody = postData;
-        request.setValue(postLength as String, forHTTPHeaderField: "Content-Length");
-        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type");
-        request.setValue("application/json", forHTTPHeaderField: "Accept");
-        
-        var responseError: NSError?;
-        var response: NSURLResponse?;
-        //TODO
-    }
-    */
     
     
     func submitSurvey(survey : Survey) -> String {

@@ -14,7 +14,8 @@ class CompleteSurveyViewController: UIViewController {
     
     //var network : NetworkDelegate? // = NetworkDelegate();
     
-    let sUrl : NSString = "http://54.88.113.204:8080/spring-survey-1.0.0-BUILD-SNAPSHOT/add";
+    //let sUrl : NSString = "http://54.88.113.204:8080/spring-survey-1.0.0-BUILD-SNAPSHOT/add";
+    let sUrl : NSString = "http://docsurvey.com:8080/spring-survey-1.0.0-BUILD-SNAPSHOT/add";
 
     override func viewDidLoad() {
         super.viewDidLoad()
