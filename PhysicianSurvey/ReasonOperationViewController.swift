@@ -116,7 +116,7 @@ class ReasonOperationViewController: UIViewController, UITableViewDelegate, UITa
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIndentifier : String = "reasonOperationTableViewCell";
         //let otherCellIdentifier : String = "otherOperationTableViewCell";
-        var cell : ReasonOperationTableViewCell = self.reasonOperationTableView.dequeueReusableCellWithIdentifier(cellIndentifier) as! ReasonOperationTableViewCell;
+        let cell : ReasonOperationTableViewCell = self.reasonOperationTableView.dequeueReusableCellWithIdentifier(cellIndentifier) as! ReasonOperationTableViewCell;
         
         switch(survey.operation!) {
             case "Leadership":
@@ -246,18 +246,19 @@ class ReasonOperationViewController: UIViewController, UITableViewDelegate, UITa
             
         }
         
-        let strReason : String = String(options![indexPath.row]) as String;
-        var height:CGFloat = self.calculateHeightForString(strReason)
+        //let strReason : String = String(options![indexPath.row]) as String;
+        //let height:CGFloat = self.calculateHeightForString(strReason)
+        let height:CGFloat = 20.0;
         return height + 70.0
     }
     
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
         
-        println("Selected row at index: \(indexPath.row)");
+        print("Selected row at index: \(indexPath.row)");
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("Selected row at index: \(indexPath.row)");
+        print("Selected row at index: \(indexPath.row)");
         reason = String(options![indexPath.row]) as String;
         survey.comments = "";  // prevents error because value is nil;
         survey.reason = reason!;
@@ -265,26 +266,27 @@ class ReasonOperationViewController: UIViewController, UITableViewDelegate, UITa
         if((commentTextField != nil) && (commentTextField?.text != "")) {
             survey.comments = commentTextField?.text;
             survey.reason = commentTextField?.text;
-            println(commentTextField?.text);
+            print(commentTextField?.text);
         }
         
-        println("The reason is " + survey.reason!);
+        print("The reason is " + survey.reason!);
         self.performSegueWithIdentifier("reasonOperationToCompleteSegue", sender: self);
     }
-    
+    /*
     func calculateHeightForString(inString:String) -> CGFloat
     {
-        var messageString = inString
-        var attributes = [UIFont(): UIFont.systemFontOfSize(15.0)]
-        var attrString:NSAttributedString? = NSAttributedString(string: messageString, attributes: attributes)
-        var rect:CGRect = attrString!.boundingRectWithSize(CGSizeMake(300.0,CGFloat.max), options: NSStringDrawingOptions.UsesLineFragmentOrigin, context:nil )//hear u will get nearer height not the exact value
-        var requredSize:CGRect = rect
+        let messageString: String = inString
+        let attributes = [UIFont(): UIFont.systemFontOfSize(15.0)]
+        let attrString:NSAttributedString? = NSAttributedString(string: messageString, attributes: attributes)
+        //let testString:NSAttributedString? = NSAttributedString(string: messageString, attributes: <#T##[String : AnyObject]?#>)
+        let rect:CGRect = attrString!.boundingRectWithSize(CGSizeMake(300.0,CGFloat.max), options: NSStringDrawingOptions.UsesLineFragmentOrigin, context:nil )//hear u will get nearer height not the exact value
+        let requredSize:CGRect = rect
         return requredSize.height  //to include button's in your tableview
         
-    }
+    }*/
     
     private func showMessage() -> Void {
-        var alertView:UIAlertView = UIAlertView();
+        let alertView:UIAlertView = UIAlertView();
         alertView.title = "Instructions"
         alertView.message = "If you enter text in the Other option, in order to keep your response anonymous, please keep subjects down to 1-6 words."
         alertView.delegate = self
@@ -295,12 +297,12 @@ class ReasonOperationViewController: UIViewController, UITableViewDelegate, UITa
     
     // get the super view of the sender to get the index of the cell
     func nextButtonOnTouchUp(sender : UIButton!) {
-        println("Button touched!");
+        print("Button touched!");
         
-        var clickedCell : UITableViewCell = sender.superview as! UITableViewCell;
-        var indexPath : NSIndexPath! = self.reasonOperationTableView.indexPathForCell(clickedCell);
+        let clickedCell : UITableViewCell = sender.superview as! UITableViewCell;
+        let indexPath : NSIndexPath! = self.reasonOperationTableView.indexPathForCell(clickedCell);
         
-        println("Selected row at index: \(indexPath.row)");
+        print("Selected row at index: \(indexPath.row)");
         reason = String(options![indexPath.row]) as String;
         survey.comments = "";  // prevents error because value is nil;
         survey.reason = reason!;
@@ -308,10 +310,10 @@ class ReasonOperationViewController: UIViewController, UITableViewDelegate, UITa
         if((commentTextField != nil) && (commentTextField?.text != "")) {
             survey.comments = commentTextField?.text;
             survey.reason = commentTextField?.text;
-            println(commentTextField?.text);
+            print(commentTextField?.text);
         }
         
-        println("The reason is " + survey.reason!);
+        print("The reason is " + survey.reason!);
         
         self.performSegueWithIdentifier("reasonOperationToCompleteSegue", sender: self);
     }

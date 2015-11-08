@@ -82,17 +82,17 @@ class OperationsTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("You selected cell #\(indexPath.row)!")
+        print("You selected cell #\(indexPath.row)!")
         
         // Get Cell Label
-        let indexPath = tableView.indexPathForSelectedRow();
+        let indexPath = tableView.indexPathForSelectedRow;
         if selectedFeeling == "Hospital Operations"  {
             operation = String(hospitalOperationsArray[indexPath!.row]) as String;
-            println(operation!);
+            print(operation!);
         }
         else {
             operation = String(soundOperationsArray[indexPath!.row]) as String;
-            println(operation!);
+            print(operation!);
         }
         survey.operation = operation!;
         self.performSegueWithIdentifier("operationsToReasonSegue", sender: self);
@@ -103,7 +103,7 @@ class OperationsTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        println("Prepare to show reason screen...");
+        print("Prepare to show reason screen...");
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
     }

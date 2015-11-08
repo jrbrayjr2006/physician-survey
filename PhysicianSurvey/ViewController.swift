@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         
         self.welcomeMessageLabel.sizeToFit();
         
-        var appDefaults = Dictionary<String, AnyObject>()
+        let appDefaults = Dictionary<String, AnyObject>()
         NSUserDefaults.standardUserDefaults().registerDefaults(appDefaults)
         NSUserDefaults.standardUserDefaults().synchronize()
         
@@ -48,17 +48,17 @@ class ViewController: UIViewController {
     }
 
     @IBAction func goToSurveyOnTouchUp(sender: UIButton) {
-        println("Button tapped!");
+        print("Button tapped!");
         
-        var emotionalIntelligenceViewController = self.storyboard?.instantiateViewControllerWithIdentifier("emotionalIntelligenceViewController") as! EmotionalIntelligenceViewController;
+        let emotionalIntelligenceViewController = self.storyboard?.instantiateViewControllerWithIdentifier("emotionalIntelligenceViewController") as! EmotionalIntelligenceViewController;
         var emotionalIntelligenceNavController = UINavigationController(rootViewController: emotionalIntelligenceViewController);
         var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate;
-        println(self.orgKey!);
+        //print(self.orgKey!);
         showMessage();
     }
     
     private func showMessage() -> Void {
-        var alertView:UIAlertView = UIAlertView();
+        let alertView:UIAlertView = UIAlertView();
         alertView.title = "Proceed to Survey"
         alertView.message = "The emotional intelligence survey will now begin.  Select a score from 1 to 10. 1 indicates not satisfied at all and 10 indicates completely satisfied."
         alertView.delegate = self
@@ -68,7 +68,7 @@ class ViewController: UIViewController {
     }
     
     private func showKeySetupMessage() -> Void {
-        var alertView:UIAlertView = UIAlertView();
+        let alertView:UIAlertView = UIAlertView();
         alertView.title = "Go To Settings"
         alertView.message = "You must have a key to use this survey app.  Go to Settings and select the Physician Survey app.  Enter your organization key in the Organization field."
         alertView.delegate = self

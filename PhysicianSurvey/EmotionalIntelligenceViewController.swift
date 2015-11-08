@@ -58,7 +58,7 @@ class EmotionalIntelligenceViewController: UIViewController {
 
     @IBAction func provideDetailsOnTouchUp(sender: UIButton) {
         survey.score = selectedValue;
-        println(strFeeling!);
+        print(strFeeling!);
     }
     
     

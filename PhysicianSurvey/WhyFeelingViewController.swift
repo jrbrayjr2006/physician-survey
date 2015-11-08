@@ -32,18 +32,18 @@ class WhyFeelingViewController: UIViewController {
         // Pass the selected object to the new view controller.     whyFeelToOperationsSegue
         if(segue.identifier == "whyFeelToOperationsSegue") {
             var svc = segue.destinationViewController as! OperationsTableViewController;
-            println("prepareForSegue:  You selected cell #\(self.selectedFeelingToPass)!")
+            print("prepareForSegue:  You selected cell #\(self.selectedFeelingToPass)!")
             //svc.selectedFeeling = self.selectedFeelingToPass;
         }
     }
 
     @IBAction func hospitalOperationOnTouchUp(sender: UIButton) {
         survey.whyFeeling = whyFeelingArray[0];
-        println(survey.whyFeeling!);
+        print(survey.whyFeeling!);
     }
 
     @IBAction func soundOperationOnTouchUp(sender: UIButton) {
         survey.whyFeeling = whyFeelingArray[1];
-        println(survey.whyFeeling!);
+        print(survey.whyFeeling!);
     }
 }
