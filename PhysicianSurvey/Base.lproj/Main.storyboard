@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gCT-GF-yjg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gCT-GF-yjg">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -31,7 +32,7 @@
                                     <segue destination="KeU-92-VdU" kind="show" identifier="emotionalIntelToWyFeelingSegue" id="Zag-Bn-wer"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwA-rx-RCs">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwA-rx-RCs">
                                 <rect key="frame" x="16" y="406" width="568" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -71,7 +72,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xod-YB-6j1">
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xod-YB-6j1">
                                 <rect key="frame" x="0.0" y="114" width="600" height="162"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -79,7 +80,7 @@
                                     <outlet property="delegate" destination="YRo-tT-mmS" id="X5D-4P-AgQ"/>
                                 </connections>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0SR-Jf-2Yx">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0SR-Jf-2Yx">
                                 <rect key="frame" x="16" y="550" width="568" height="30"/>
                                 <state key="normal" title="Provide Details">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -120,8 +121,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="operationsTableViewCell" id="ZZ2-hC-UYM" customClass="OperationsTableViewCell" customModule="PhysicianSurvey" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="86" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZZ2-hC-UYM" id="kLn-0D-vYW">
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eul-6L-p6M">
@@ -134,7 +137,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="operationsCellLabel" destination="kLn-0D-vYW" id="pDU-vq-O1S"/>
-                                    <segue destination="PFb-qS-KsI" kind="show" identifier="operationsToReasonSegue" id="mdW-mE-BuJ"/>
+                                    <segue destination="e8v-G3-fQt" kind="show" identifier="operationsToIssueDetailSegue" id="q6o-qz-QWa"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -169,15 +172,16 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" restorationIdentifier="reasonOperationTableCell" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" editingAccessoryType="disclosureIndicator" id="80u-CR-heQ" customClass="ReasonOperationTableViewCell" customModule="PhysicianSurvey" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="22" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="80u-CR-heQ" id="xW4-Kt-e4w">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KoE-hr-Jbk">
                                                     <rect key="frame" x="8" y="11" width="468" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -208,6 +212,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KDf-NQ-Kua" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5574" y="324"/>
+        </scene>
+        <!--Issue Detail Controller-->
+        <scene sceneID="bgv-9X-4NX">
+            <objects>
+                <viewController id="e8v-G3-fQt" customClass="IssueDetailController" customModule="PhysicianSurvey" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g1r-ho-r6X"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fbe-Ac-hdW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EuH-8h-6oG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="k85-Ws-gyo">
+                                <rect key="frame" x="20" y="236" width="560" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" hint="Write Response Here.  Your response should be between 6 and 20 words." identifier=""/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbh-1J-C46">
+                                <rect key="frame" x="20" y="84" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQL-Cv-5zf">
+                                <rect key="frame" x="20" y="562" width="560" height="30"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="completeDissatisfactionReason:" destination="e8v-G3-fQt" eventType="touchUpInside" id="o7M-yY-Xat"/>
+                                    <segue destination="m55-Jn-ZMx" kind="show" identifier="segueFromIssueDetailToCompleteSurvey" id="6sW-w7-lVb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="k85-Ws-gyo" firstAttribute="leading" secondItem="EuH-8h-6oG" secondAttribute="leadingMargin" id="5Mm-Yr-UQ8"/>
+                            <constraint firstItem="Fbe-Ac-hdW" firstAttribute="top" secondItem="OQL-Cv-5zf" secondAttribute="bottom" constant="8" id="AYM-Wt-bcb"/>
+                            <constraint firstItem="kbh-1J-C46" firstAttribute="top" secondItem="g1r-ho-r6X" secondAttribute="bottom" constant="20" id="NHx-eo-QAL"/>
+                            <constraint firstItem="OQL-Cv-5zf" firstAttribute="trailing" secondItem="EuH-8h-6oG" secondAttribute="trailingMargin" id="R57-vA-VX5"/>
+                            <constraint firstItem="k85-Ws-gyo" firstAttribute="trailing" secondItem="EuH-8h-6oG" secondAttribute="trailingMargin" id="T7c-6F-YrV"/>
+                            <constraint firstItem="OQL-Cv-5zf" firstAttribute="leading" secondItem="EuH-8h-6oG" secondAttribute="leadingMargin" id="Y63-il-E3l"/>
+                            <constraint firstItem="kbh-1J-C46" firstAttribute="leading" secondItem="EuH-8h-6oG" secondAttribute="leadingMargin" id="hdx-7X-VDo"/>
+                            <constraint firstItem="kbh-1J-C46" firstAttribute="trailing" secondItem="EuH-8h-6oG" secondAttribute="trailingMargin" id="tvj-iA-4sK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailInstructionsLabel" destination="kbh-1J-C46" id="JId-g6-aWp"/>
+                        <outlet property="reasonDetailTextField" destination="k85-Ws-gyo" id="9eb-bs-sJN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hof-rk-db3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5477" y="1111"/>
         </scene>
         <!--Complete Survey View Controller-->
         <scene sceneID="eTW-N8-etb">
@@ -291,7 +350,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTX-Nj-1t3">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTX-Nj-1t3">
                                 <rect key="frame" x="16" y="84" width="568" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="mxz-sR-3NA"/>
@@ -304,7 +363,7 @@
                                     <segue destination="QZf-S3-yM2" kind="show" id="0rI-JC-P7e"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssT-lI-76F">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssT-lI-76F">
                                 <rect key="frame" x="16" y="264" width="568" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="chR-ev-Wqh"/>
@@ -364,5 +423,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="8wD-53-wUc"/>
+        <segue reference="6sW-w7-lVb"/>
     </inferredMetricsTieBreakers>
 </document>

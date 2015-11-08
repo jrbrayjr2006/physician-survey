@@ -31,8 +31,8 @@ class WhyFeelingViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Pass the selected object to the new view controller.     whyFeelToOperationsSegue
         if(segue.identifier == "whyFeelToOperationsSegue") {
-            var svc = segue.destinationViewController as! OperationsTableViewController;
-            print("prepareForSegue:  You selected cell #\(self.selectedFeelingToPass)!")
+            //var svc = segue.destinationViewController as! OperationsTableViewController;
+            //print("prepareForSegue:  You selected cell #\(self.selectedFeelingToPass)!")
             //svc.selectedFeeling = self.selectedFeelingToPass;
         }
     }

@@ -15,6 +15,7 @@
 		B7061E981B6F12BB004295C6 /* PhysicianSurveyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7061E971B6F12BB004295C6 /* PhysicianSurveyTests.swift */; };
 		B70AE33D1B8654030079DAD6 /* sound_physicians_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B70AE33C1B8654030079DAD6 /* sound_physicians_logo.png */; };
 		B70AE33F1B8657D40079DAD6 /* EmotionalIntelligenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70AE33E1B8657D40079DAD6 /* EmotionalIntelligenceViewController.swift */; };
+		B73C12F01BEF02B90034C23B /* IssueDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73C12EF1BEF02B90034C23B /* IssueDetailController.swift */; };
 		B74EA8511B9D4F8600D5CD76 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B74EA8501B9D4F8600D5CD76 /* Settings.bundle */; };
 		B75435FA1B86A9CA00254EA1 /* WhyFeelingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75435F91B86A9CA00254EA1 /* WhyFeelingViewController.swift */; };
 		B75435FC1B86AA0900254EA1 /* WorkDissatisfactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75435FB1B86AA0900254EA1 /* WorkDissatisfactionViewController.swift */; };
@@ -57,6 +58,7 @@
 		B7061E971B6F12BB004295C6 /* PhysicianSurveyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicianSurveyTests.swift; sourceTree = "<group>"; };
 		B70AE33C1B8654030079DAD6 /* sound_physicians_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sound_physicians_logo.png; sourceTree = "<group>"; };
 		B70AE33E1B8657D40079DAD6 /* EmotionalIntelligenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionalIntelligenceViewController.swift; sourceTree = "<group>"; };
+		B73C12EF1BEF02B90034C23B /* IssueDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueDetailController.swift; sourceTree = "<group>"; };
 		B74EA8501B9D4F8600D5CD76 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		B75435F91B86A9CA00254EA1 /* WhyFeelingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhyFeelingViewController.swift; sourceTree = "<group>"; };
 		B75435FB1B86AA0900254EA1 /* WorkDissatisfactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkDissatisfactionViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				B7722C791B8A9A2900A858E5 /* CompleteSurveyViewController.swift */,
 				B7722C771B8A986A00A858E5 /* ReasonOperationTableViewCell.swift */,
 				B74EA8501B9D4F8600D5CD76 /* Settings.bundle */,
+				B73C12EF1BEF02B90034C23B /* IssueDetailController.swift */,
 			);
 			path = PhysicianSurvey;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				B755A30D1B86D85500FA01E4 /* OperationsTableViewController.swift in Sources */,
 				B755A30B1B86D82A00FA01E4 /* OperationsTableViewCell.swift in Sources */,
 				B7061E821B6F12BB004295C6 /* AppDelegate.swift in Sources */,
+				B73C12F01BEF02B90034C23B /* IssueDetailController.swift in Sources */,
 				B75435FC1B86AA0900254EA1 /* WorkDissatisfactionViewController.swift in Sources */,
 				B7722C781B8A986A00A858E5 /* ReasonOperationTableViewCell.swift in Sources */,
 				B7722C7A1B8A9A2900A858E5 /* CompleteSurveyViewController.swift in Sources */,
