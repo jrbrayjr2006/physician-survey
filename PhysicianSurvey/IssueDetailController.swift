@@ -24,6 +24,10 @@ class IssueDetailController: UIViewController {
         
         // Do any additional setup after loading the view.
         detailInstructionsLabel.text = detailInstructions;
+        reasonDetailTextField.layer.cornerRadius = 5;
+        reasonDetailTextField.layer.borderWidth = 1;
+        reasonDetailTextField.layer.borderColor = UIColor.blueColor().CGColor;
+        
     }
     
     override func didReceiveMemoryWarning() {

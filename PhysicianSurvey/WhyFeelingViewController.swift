@@ -19,7 +19,7 @@ class WhyFeelingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Why Do I Feel This Way?";
+        self.title = "What is contributing to this current level?";
     }
 
     override func didReceiveMemoryWarning() {

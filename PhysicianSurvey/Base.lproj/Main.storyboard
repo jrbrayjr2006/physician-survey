@@ -227,7 +227,6 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter Reason Here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="k85-Ws-gyo" userLabel="Reason Details">
                                 <rect key="frame" x="20" y="236" width="560" height="150"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" hint="Write Response Here.  Your response should be between 6 and 20 words." identifier="">
                                     <accessibilityTraits key="traits" none="YES"/>
                                 </accessibility>
@@ -251,7 +250,7 @@
                                     <segue destination="m55-Jn-ZMx" kind="show" identifier="segueFromIssueDetailToCompleteSurvey" id="6sW-w7-lVb"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please limit responses to 6 to 20 words" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azq-aK-xB0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please limit responses to 6 to 20 words" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azq-aK-xB0">
                                 <rect key="frame" x="20" y="403" width="560" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -371,7 +370,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="mxz-sR-3NA"/>
                                 </constraints>
-                                <state key="normal" title="Hospital Operations" backgroundImage="background-gradient.png">
+                                <state key="normal" title="Score Related To Hospital Operations" backgroundImage="background-gradient.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -384,7 +383,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="chR-ev-Wqh"/>
                                 </constraints>
-                                <state key="normal" title="Sound Operations" backgroundImage="background-gradient.png">
+                                <state key="normal" title="Score Related To Sound Operations" backgroundImage="background-gradient.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
