@@ -225,10 +225,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="k85-Ws-gyo">
-                                <rect key="frame" x="20" y="236" width="560" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <accessibility key="accessibilityConfiguration" hint="Write Response Here.  Your response should be between 6 and 20 words." identifier=""/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter Reason Here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="k85-Ws-gyo" userLabel="Reason Details">
+                                <rect key="frame" x="20" y="236" width="560" height="150"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" hint="Write Response Here.  Your response should be between 6 and 20 words." identifier="">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="iqH-JG-Vbp"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -239,24 +244,35 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQL-Cv-5zf">
-                                <rect key="frame" x="20" y="562" width="560" height="30"/>
+                                <rect key="frame" x="20" y="554" width="560" height="30"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="completeDissatisfactionReason:" destination="e8v-G3-fQt" eventType="touchUpInside" id="o7M-yY-Xat"/>
                                     <segue destination="m55-Jn-ZMx" kind="show" identifier="segueFromIssueDetailToCompleteSurvey" id="6sW-w7-lVb"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please limit responses to 6 to 20 words" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azq-aK-xB0">
+                                <rect key="frame" x="20" y="403" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="k85-Ws-gyo" firstAttribute="leading" secondItem="EuH-8h-6oG" secondAttribute="leadingMargin" id="5Mm-Yr-UQ8"/>
-                            <constraint firstItem="Fbe-Ac-hdW" firstAttribute="top" secondItem="OQL-Cv-5zf" secondAttribute="bottom" constant="8" id="AYM-Wt-bcb"/>
-                            <constraint firstItem="kbh-1J-C46" firstAttribute="top" secondItem="g1r-ho-r6X" secondAttribute="bottom" constant="20" id="NHx-eo-QAL"/>
-                            <constraint firstItem="OQL-Cv-5zf" firstAttribute="trailing" secondItem="EuH-8h-6oG" secondAttribute="trailingMargin" id="R57-vA-VX5"/>
-                            <constraint firstItem="k85-Ws-gyo" firstAttribute="trailing" secondItem="EuH-8h-6oG" secondAttribute="trailingMargin" id="T7c-6F-YrV"/>
-                            <constraint firstItem="OQL-Cv-5zf" firstAttribute="leading" secondItem="EuH-8h-6oG" secondAttribute="leadingMargin" id="Y63-il-E3l"/>
-                            <constraint firstItem="kbh-1J-C46" firstAttribute="leading" secondItem="EuH-8h-6oG" secondAttribute="leadingMargin" id="hdx-7X-VDo"/>
-                            <constraint firstItem="kbh-1J-C46" firstAttribute="trailing" secondItem="EuH-8h-6oG" secondAttribute="trailingMargin" id="tvj-iA-4sK"/>
+                            <constraint firstItem="azq-aK-xB0" firstAttribute="leading" secondItem="EuH-8h-6oG" secondAttribute="leadingMargin" id="6Ql-Tj-azA"/>
+                            <constraint firstItem="k85-Ws-gyo" firstAttribute="top" secondItem="kbh-1J-C46" secondAttribute="bottom" constant="131" id="8aS-w5-WIn"/>
+                            <constraint firstItem="kbh-1J-C46" firstAttribute="top" secondItem="g1r-ho-r6X" secondAttribute="bottom" constant="20" id="Cpu-8k-nKC"/>
+                            <constraint firstItem="Fbe-Ac-hdW" firstAttribute="top" secondItem="OQL-Cv-5zf" secondAttribute="bottom" constant="16" id="HTO-0k-HsP"/>
+                            <constraint firstItem="kbh-1J-C46" firstAttribute="leading" secondItem="EuH-8h-6oG" secondAttribute="leadingMargin" id="Ve4-SA-bNQ"/>
+                            <constraint firstItem="azq-aK-xB0" firstAttribute="trailing" secondItem="EuH-8h-6oG" secondAttribute="trailingMargin" id="Xxg-dA-mtN"/>
+                            <constraint firstItem="azq-aK-xB0" firstAttribute="top" secondItem="k85-Ws-gyo" secondAttribute="bottom" constant="40" id="bCp-yS-QNx"/>
+                            <constraint firstItem="OQL-Cv-5zf" firstAttribute="trailing" secondItem="EuH-8h-6oG" secondAttribute="trailingMargin" id="bm2-F5-YCp"/>
+                            <constraint firstItem="k85-Ws-gyo" firstAttribute="centerX" secondItem="EuH-8h-6oG" secondAttribute="centerX" constant="100" id="dqQ-KE-5R9"/>
+                            <constraint firstItem="OQL-Cv-5zf" firstAttribute="leading" secondItem="EuH-8h-6oG" secondAttribute="leadingMargin" id="dti-mC-XMb"/>
+                            <constraint firstItem="k85-Ws-gyo" firstAttribute="trailing" secondItem="EuH-8h-6oG" secondAttribute="trailingMargin" id="dzj-Mp-Xqa"/>
+                            <constraint firstItem="kbh-1J-C46" firstAttribute="trailing" secondItem="EuH-8h-6oG" secondAttribute="trailingMargin" id="fce-M3-yAy"/>
+                            <constraint firstItem="k85-Ws-gyo" firstAttribute="leading" secondItem="EuH-8h-6oG" secondAttribute="leadingMargin" id="u1w-qI-En0"/>
                         </constraints>
                     </view>
                     <connections>
@@ -266,7 +282,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hof-rk-db3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5477" y="1111"/>
+            <point key="canvasLocation" x="5478" y="1143"/>
         </scene>
         <!--Complete Survey View Controller-->
         <scene sceneID="eTW-N8-etb">
