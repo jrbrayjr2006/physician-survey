@@ -60,7 +60,7 @@
             </objects>
             <point key="canvasLocation" x="1057" y="324"/>
         </scene>
-        <!--Emotional Intelligence-->
+        <!--Physician Satisfaction Survey-->
         <scene sceneID="j7K-PG-zrf">
             <objects>
                 <viewController storyboardIdentifier="emotionalIntelligenceViewController" id="YRo-tT-mmS" customClass="EmotionalIntelligenceViewController" customModule="PhysicianSurvey" customModuleProvider="target" sceneMemberID="viewController">
@@ -102,7 +102,7 @@
                             <constraint firstItem="xod-YB-6j1" firstAttribute="top" secondItem="WoU-ug-1WS" secondAttribute="bottom" constant="50" id="pyb-ED-BNW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Emotional Intelligence" id="3xE-gB-Dh0"/>
+                    <navigationItem key="navigationItem" title="Physician Satisfaction Survey" id="3xE-gB-Dh0"/>
                     <connections>
                         <outlet property="feelingPicker" destination="xod-YB-6j1" id="sdF-3I-Twb"/>
                     </connections>
