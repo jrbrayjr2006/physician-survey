@@ -12,7 +12,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var welcomeMessageLabel: UILabel!
     
-    var welcomeMessage : String = "Welcome to the Sound Physicians Job Satisfaction App.  Please take time once a day to monitor your job satisfaction.";
+    @IBOutlet weak var otherMessageLabel: UILabel!
+    var welcomeMessage : String = "Welcome to the Sound Physicians Satisfaction App.  Please take time time once a day to monitor job satisfaction.  Your data is very valuable to us in order to make effective changes.";
+    
+    var otherText : String = "Each page will include an optional test box.  We recommend only describing a topic of dissatisfaction with a few words.";
     
     // key to verify application is active
     var orgKey : String?
@@ -27,6 +30,11 @@ class ViewController: UIViewController {
         self.welcomeMessageLabel.text = welcomeMessage;
         
         self.welcomeMessageLabel.sizeToFit();
+        
+        self.otherMessageLabel.numberOfLines = 0;
+        self.otherMessageLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping;
+        self.otherMessageLabel.text = otherText;
+        self.otherMessageLabel.sizeToFit();
         
         let appDefaults = Dictionary<String, AnyObject>()
         NSUserDefaults.standardUserDefaults().registerDefaults(appDefaults)

@@ -32,27 +32,37 @@
                                     <segue destination="KeU-92-VdU" kind="show" identifier="emotionalIntelToWyFeelingSegue" id="Zag-Bn-wer"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwA-rx-RCs">
-                                <rect key="frame" x="16" y="406" width="568" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwA-rx-RCs">
+                                <rect key="frame" x="20" y="237" width="560" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehj-7h-ezn">
+                                <rect key="frame" x="20" y="283" width="560" height="21"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Y83-b3-Wzj" secondAttribute="centerX" id="06q-4U-bDn"/>
+                            <constraint firstItem="ehj-7h-ezn" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="A0I-mu-T9s"/>
+                            <constraint firstItem="ehj-7h-ezn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="KIU-i0-Ge2"/>
+                            <constraint firstItem="ehj-7h-ezn" firstAttribute="top" secondItem="rwA-rx-RCs" secondAttribute="bottom" constant="25" id="Loy-bM-xpv"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="txE-qE-T96" secondAttribute="bottom" constant="20" id="N8R-YC-ggs"/>
                             <constraint firstItem="rwA-rx-RCs" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="XIM-H1-hRP"/>
                             <constraint firstItem="rwA-rx-RCs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Yte-mf-Nzf"/>
                             <constraint firstAttribute="centerX" secondItem="txE-qE-T96" secondAttribute="centerX" id="aaE-I4-xkq"/>
                             <constraint firstAttribute="centerX" secondItem="txE-qE-T96" secondAttribute="centerX" id="tGJ-l4-jIT"/>
                             <constraint firstItem="Y83-b3-Wzj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="tae-25-btZ"/>
-                            <constraint firstItem="rwA-rx-RCs" firstAttribute="top" secondItem="Y83-b3-Wzj" secondAttribute="bottom" constant="194" id="uO6-9l-A2i"/>
+                            <constraint firstItem="rwA-rx-RCs" firstAttribute="top" secondItem="Y83-b3-Wzj" secondAttribute="bottom" constant="25" id="xe6-Ql-nYY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Welcome" id="Dbl-ev-Icd"/>
                     <connections>
+                        <outlet property="otherMessageLabel" destination="ehj-7h-ezn" id="dqs-hO-OLO"/>
                         <outlet property="welcomeMessageLabel" destination="rwA-rx-RCs" id="jmW-m8-YZn"/>
                     </connections>
                 </viewController>
