@@ -42,6 +42,7 @@ class ViewController: UIViewController {
         
         let organizationKey = NSUserDefaults.standardUserDefaults().valueForKey("organization") as AnyObject?;
         
+        showInstructions();
         self.orgKey = organizationKey as? String;
         if(self.orgKey == nil) {
             showKeySetupMessage();
@@ -69,6 +70,16 @@ class ViewController: UIViewController {
         let alertView:UIAlertView = UIAlertView();
         alertView.title = "Proceed to Survey"
         alertView.message = "The physician survey will now begin.  Select a score from 1 to 10. 1 indicates not satisfied at all and 10 indicates completely satisfied."
+        alertView.delegate = self
+        alertView.addButtonWithTitle("OK")
+        alertView.show()
+        return;
+    }
+    
+    private func showInstructions() -> Void {
+        let alertView:UIAlertView = UIAlertView();
+        alertView.title = "Introduction";
+        alertView.message = "Welcome to the Physician Satisfaction Survey. As Leaders in Hospital Medicine, our goal is to provide you (the valued Hospitalist) with support in order to achieve success. To ensure that we are satisfying your needs and expectations, we would appreciate your help by taking a few moments each day to complete this survey. Your feedback will help us assess your needs, meet your job expectations and help create an atmosphere of transparency.  Please be assured that your responses will be completely anonymous.  You will need to follow the prompts to complete the survey. The survey should take less than 2 minutes during your day.  Your comments are appreciated and will help us to learn about what we are doing well and what we need to do better. Comments will be brought back to the team in an anonymous fashion for discussion.  We value your input. Please, click on the bottom of the screen to begin your survey.";
         alertView.delegate = self
         alertView.addButtonWithTitle("OK")
         alertView.show()
