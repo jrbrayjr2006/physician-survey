@@ -33,7 +33,7 @@ class NetworkDelegate: NSObject {
         let comments : String = survey.comments!;
         let orgKey : String = survey.orgKey!;
         //add?rating=5&why_feeling=lousy&work_dissatisfaction=survey&answer_matrix=1,2,3&comments=These-comments
-        let postQueryParameters : NSString = "rating=\(rating)&why_feeling=\(why_feeling)&work_dissatisfaction=\(work_dissatisfaction)&answer_matrix=\(answer_matrix)&comments=\(comments)&orgKey=\(orgKey)";
+        let postQueryParameters : NSString = "rating=\(rating)&why_feeling=\(why_feeling)&work_dissatisfaction=\(work_dissatisfaction)&answer_matrix=\(answer_matrix)&comments=\(comments)&organization_key=\(orgKey)";
         //var post :NSString = "username=\(username)&password=\(password)";
         let newUrlString = String(self.serviceUrl!);
         NSLog("This is the url:  %@", newUrlString);

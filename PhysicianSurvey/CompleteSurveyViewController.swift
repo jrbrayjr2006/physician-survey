@@ -16,7 +16,6 @@ class CompleteSurveyViewController: UIViewController {
     
     let sUrl : NSString = "http://www.docsatisfaction.com:8080/spring-survey-1.0.0-BUILD-SNAPSHOT/add";
     //let sUrl : NSString = "http://www.jaydot2.com:8080/spring-survey-1.0.0-BUILD-SNAPSHOT/add";
-    //let sUrl : NSString = "http://docsurvey.com:8080/spring-survey-1.0.0-BUILD-SNAPSHOT/add";
 
     override func viewDidLoad() {
         super.viewDidLoad()
