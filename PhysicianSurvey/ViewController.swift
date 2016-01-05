@@ -13,14 +13,28 @@ class ViewController: UIViewController {
     @IBOutlet weak var welcomeMessageLabel: UILabel!
     
     @IBOutlet weak var otherMessageLabel: UILabel!
-    var welcomeMessage : String = "Welcome to the Sound Physicians Satisfaction App.  Please take time time once a day to monitor job satisfaction.  Your data is very valuable to us in order to make effective changes.";
+    var welcomeMessage : String = "Welcome to the Physician Satisfaction Survey. As Leaders in Hospital Medicine, our goal is to provide you (the valued Hospitalist) with support in order to achieve success. To ensure that we are satisfying your needs and expectations, we would appreciate your help by taking a few moments each day to complete this survey. Your feedback will help us assess your needs, meet your job expectations and help create an atmosphere of transparency.  Please be assured that your responses will be completely anonymous.";
     
     var otherText : String = "Each page will include an optional test box.  We recommend only describing a topic of dissatisfaction with a few words.";
+    
+    var startSurveyText : String = "We value your input. Please, click on the bottom of the screen to begin your survey.";
     
     // key to verify application is active
     var orgKey : String?
     
     var survey : Survey = Survey.sharedFavoriteList;
+    
+    var welcomeAlertController : UIAlertController = UIAlertController(title: "Introduction", message: "", preferredStyle: .Alert);
+    
+    // Create the actions
+    var okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
+        UIAlertAction in NSLog("OK Pressed");
+        //swapText();
+    };
+    var cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) {
+        UIAlertAction in
+        NSLog("Cancel Pressed");
+    };
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +63,9 @@ class ViewController: UIViewController {
             return;
         }
         survey.orgKey = self.orgKey;
+        
+        welcomeAlertController.addAction(okAction);
+        welcomeAlertController.addAction(cancelAction);
     }
 
     override func didReceiveMemoryWarning() {
@@ -93,6 +110,10 @@ class ViewController: UIViewController {
         alertView.delegate = self
         alertView.addButtonWithTitle("OK")
         alertView.show()
+        return;
+    }
+    
+    private func swapText() -> Void {
         return;
     }
 
