@@ -13,9 +13,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var welcomeMessageLabel: UILabel!
     
     @IBOutlet weak var otherMessageLabel: UILabel!
-    var welcomeMessage : String = "Welcome to the Physician Satisfaction Survey. As Leaders in Hospital Medicine, our goal is to provide you (the valued Hospitalist) with support in order to achieve success. To ensure that we are satisfying your needs and expectations, we would appreciate your help by taking a few moments each day to complete this survey. Your feedback will help us assess your needs, meet your job expectations and help create an atmosphere of transparency.  Please be assured that your responses will be completely anonymous.";
+    var welcomeMessage : String = "You will need to follow the prompts to complete the survey. The survey should take less than 2 minutes during your day.";
     
-    var otherText : String = "Each page will include an optional test box.  We recommend only describing a topic of dissatisfaction with a few words.";
+    var otherText : String = "We value your input. Please, click on the bottom of the screen to begin your survey.";
     
     var startSurveyText : String = "We value your input. Please, click on the bottom of the screen to begin your survey.";
     
@@ -96,7 +96,7 @@ class ViewController: UIViewController {
     private func showInstructions() -> Void {
         let alertView:UIAlertView = UIAlertView();
         alertView.title = "Introduction";
-        alertView.message = "Welcome to the Physician Satisfaction Survey. As Leaders in Hospital Medicine, our goal is to provide you (the valued Hospitalist) with support in order to achieve success. To ensure that we are satisfying your needs and expectations, we would appreciate your help by taking a few moments each day to complete this survey. Your feedback will help us assess your needs, meet your job expectations and help create an atmosphere of transparency.  Please be assured that your responses will be completely anonymous.  You will need to follow the prompts to complete the survey. The survey should take less than 2 minutes during your day.  Your comments are appreciated and will help us to learn about what we are doing well and what we need to do better. Comments will be brought back to the team in an anonymous fashion for discussion.  We value your input. Please, click on the bottom of the screen to begin your survey.";
+        alertView.message = "Welcome to the Physician Satisfaction Survey. As Leaders in Hospital Medicine, our goal is to provide you (the valued Hospitalist) with support in order to achieve success. To ensure that we are satisfying your needs and expectations, we would appreciate your help by taking a few moments each day to complete this survey. Your feedback will help us assess your needs, meet your job expectations and help create an atmosphere of transparency.  Please be assured that your responses will be completely anonymous.";
         alertView.delegate = self
         alertView.addButtonWithTitle("OK")
         alertView.show()
