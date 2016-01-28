@@ -56,7 +56,7 @@ class CompleteSurveyViewController: UIViewController {
     private func showMessage() -> Void {
         let alertView:UIAlertView = UIAlertView();
         alertView.title = "Survey Complete"
-        alertView.message = "Thank you for completing the Survey. Your comments are appreciated and will help us to learn about what we are doing well and what we need to do better. Results will be shared with the team during the next team meeting to discuss how to increase job satisfaction in a team forum."
+        alertView.message = "Thank you for completing the Survey. Your comments are appreciated and will help us to learn about what we are doing well and what we need to do better."
         alertView.delegate = self
         alertView.addButtonWithTitle("OK")
         alertView.show()
